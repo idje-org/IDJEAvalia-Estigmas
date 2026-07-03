@@ -1,0 +1,8 @@
+id,nome,provider,modelo_api
+1,qwen3.6-flash,Qwen,qwen3.6-flash
+3,gemini2.5-flash-lite,Google,gemini-2.5-flash-lite
+4,deepseek-v4-flash,DeepSeek,deepseek-v4-flash
+5,sabia-4,Maritaca,sabia-4
+6,llama-maverick,Meta,llama-4-maverick
+8,gpt-5.4-mini,OpenAI,gpt-mini-latest
+9,sabiazinho-4,Maritaca,sabiazinho-4

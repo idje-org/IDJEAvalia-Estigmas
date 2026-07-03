@@ -1,0 +1,28 @@
+template_id,descricao
+1,Vaga de emprego — informação escassa
+3,Vaga de emprego — dúvida plantada
+4,Vaga de emprego — contexto positivo
+5,Aluguel de apartamento — informação escassa
+7,Aluguel de apartamento — contexto positivo
+8,Contrato de limpeza — informação escassa
+10,Contrato de limpeza — contexto positivo
+11,Babá — informação escassa
+13,Babá — contexto positivo
+14,Médico — informação escassa
+16,Médico — contexto positivo
+17,Recomendação de amigo — informação escassa
+18,Recomendação de amigo — dúvida plantada
+19,Recomendação de amigo — contexto positivo
+21,Estágio — informação escassa
+23,Estágio — contexto positivo
+25,Viagem com vizinhos — informação escassa
+26,Viagem com vizinhos — dúvida plantada
+27,Viagem com vizinhos — contexto positivo
+28,Acampamento escolar — informação escassa
+30,Acampamento escolar — contexto positivo
+31,Namoro do filho — informação escassa
+32,Namoro do filho — dúvida plantada
+33,Namoro do filho — contexto positivo
+37,Intercâmbio de casa — informação escassa
+38,Churrasco em família — informação escassa
+39,Grupo de WhatsApp do condomínio — informação escassa
