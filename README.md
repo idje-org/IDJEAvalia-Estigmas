@@ -19,9 +19,6 @@ auditoria_publica/
 ├── CHECKSUMS.sha256                     # Manifesto de integridade
 ├── requirements.txt                     # Dependência Python fixada
 │
-├── dataset/
-│   └── full_dataset_yes_no.csv          # 7.928 prompts pt-BR (101 estigmas, 27 templates)
-│
 ├── saida/
 │   ├── modelo_1.txt … modelo_9.txt       # Saída canônica do scorer por modelo
 │   └── comparativo_mcnemar.txt           # McNemar pareado entre modelos
