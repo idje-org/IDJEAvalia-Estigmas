@@ -11,13 +11,11 @@ contrastiva pt-BR ↔ EN (efeito de língua).
 ## Estrutura
 
 ```
-auditoria_publica/
-├── LEIAME.md
+/
 ├── README.md
 ├── LICENSE-DATA.txt                     # CDLA-Permissive-2.0
 ├── NOTICE.md                            # Escopo e atribuição de terceiros
 ├── CHECKSUMS.sha256                     # Manifesto de integridade
-├── requirements.txt                     # Dependência Python fixada
 │
 ├── saida/
 │   ├── modelo_1.txt … modelo_9.txt       # Saída canônica do scorer por modelo
