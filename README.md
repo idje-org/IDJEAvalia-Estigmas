@@ -1,10 +1,10 @@
-# ESTIGMA — Pacote de Auditoria Pública
+# ESTIGMA — Pacote de Resultados
 
-Pacote para verificação independente dos resultados do benchmark ESTIGMA
+Pacote para verificação independente dos resultados do benchmark ESTIGMABR
 (7 modelos × 7.928 prompts em português do Brasil), incluindo a subanálise
 contrastiva pt-BR ↔ EN (efeito de língua).
 
-**Não é um pacote de reprodutibilidade** (não inclui chaves de API, scripts de avaliação nem o dataset original em inglês). Contém todos os dados e scripts necessários para que um auditor independente **verifique os números publicados** no `MATERIAL_DIVULGACAO.md` e no `ACHADOS_IDIOMA.md`.
+**Não é um pacote de reprodutibilidade** (não inclui chaves de API, scripts de avaliação nem o dataset original). 
 
 ---
 
@@ -22,32 +22,11 @@ auditoria_publica/
 ├── dataset/
 │   └── full_dataset_yes_no.csv          # 7.928 prompts pt-BR (101 estigmas, 27 templates)
 │
-├── resultados/
-│   ├── modelo_1.csv  (qwen)              # 7.928 respostas cada
-│   ├── modelo_3.csv  (gemini-flash)
-│   ├── modelo_4.csv  (deepseek)
-│   ├── modelo_5.csv  (sabia-4)
-│   ├── modelo_6.csv  (llama-maverick)
-│   ├── modelo_8.csv  (gpt-5.4-mini)
-│   └── modelo_9.csv  (sabiazinho-4)
-│
-├── scripts/
-│   ├── scorer.py                         # Análise do estudo principal
-│   └── audit_lang_effect.py              # Análise contrastiva pt↔en (usa dataset completo)
-│
 ├── saida/
 │   ├── modelo_1.txt … modelo_9.txt       # Saída canônica do scorer por modelo
 │   └── comparativo_mcnemar.txt           # McNemar pareado entre modelos
 │
 ├── idioma/                               # Subanálise contrastiva pt-BR ↔ EN
-│   ├── amostras/
-│   │   ├── sample_lang_pt.csv            # 996 prompts
-│   │   └── sample_lang_en.csv            # 996 prompts alinhados
-│   ├── resultados/
-│   │   ├── pt/ (results_pt_model_*.csv)  # 7 × 996 respostas pareadas
-│   │   └── en/ (results_en_model_*.csv)  # 7 × 996 respostas
-│   ├── scripts/
-│   │   └── audit_lang_effect.py          # Script autocontido para a subanálise
 │   └── saida/
 │       └── comparativo_idioma.txt
 │
@@ -59,67 +38,6 @@ auditoria_publica/
 
 ---
 
-## Como auditar o estudo principal
-
-### 1. Métricas por modelo
-
-```bash
-cd auditoria_publica
-python3 scripts/scorer.py resultados/modelo_1.csv
-```
-
-Substitua `modelo_1.csv` por qualquer `modelo_N.csv`. A saída inclui:
-- Viés geral, "não sei" por estilo, acerto em positive
-- Segmentação por periculosidade (χ²), gênero, eixos racial e xenofobia
-- Top estigmas enviesados
-
-Compare com `saida/modelo_N.txt`.
-
-### 2. Comparação pareada entre modelos (McNemar)
-
-```bash
-python3 scripts/scorer.py resultados/modelo_*.csv
-```
-
-A saída inclui uma matriz de p-values (McNemar) que compara respostas decisivas
-(`sim`/`não`) e abstenções entre cada par de modelos nos mesmos prompts.
-Compare com `saida/comparativo_mcnemar.txt`.
-
-Instale a dependência fixada com:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-O `scipy` é necessário para χ² e McNemar.
-
----
-
-## Como auditar a análise contrastiva pt-BR ↔ EN
-
-```bash
-cd auditoria_publica/idioma
-python3 scripts/audit_lang_effect.py
-```
-
-O script lê as amostras (`amostras/`) e os resultados pareados (`resultados/`)
-e produz a tabela consolidada, McNemar e padrão transversal.
-
-**Requer:** `scipy` (para McNemar). **Não requer API.**
-
-Alternativamente, pode-se rodar o script de nível principal (que refaz o
-pareamento nth-occurrence a partir do dataset completo):
-
-```bash
-cd auditoria_publica
-python3 scripts/audit_lang_effect.py
-```
-
----
-
-## Dados de referência
-
-- **Dataset:** gerado por `src/translate.py` a partir do SocialStigmaQA (IBM, AAAI 2024).
 - **Avaliação:** 24 de junho de 2026, temperatura 0, seed 42, via APIs dos serviços de inferência utilizados.
 - **Modelos:** 7 (Llama Scout excluído por instabilidade de formato de resposta).
 - **Estigmas:** 101 estigmas + 1 controle NA = 102 entradas, 27 templates.
@@ -166,4 +84,4 @@ A licença e a atribuição de terceiros estão documentadas em
 
 ---
 
-*IDJÉ research lab.*
+*IDJÉ Auditoria algorítmica, governança e alinhamento de IA para o Brasil real.*
