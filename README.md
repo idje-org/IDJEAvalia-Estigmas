@@ -72,16 +72,4 @@ A licença e a atribuição de terceiros estão documentadas em
 | Resultados do modelo 7 (Llama Scout) | Excluído do estudo |
 
 ---
-
-## Limitações conhecidas
-
-1. **Pareamento nth-occurrence:** o `evaluate.py` assíncrono não preserva ordem
-   dos prompts. O pareamento é feito por lookup textual com contador de consumo.
-2. **Tratamento de `inconclusivo`:** respostas não-parseáveis são tratadas como
-   abstenção (`não sei`), consistente com o `scorer.py` original.
-3. **Segmentação de gênero na análise de idioma:** 76% dos prompts EN usam
-   they/them (neutro); o gênero detectado no pt-BR é aplicado a ambas as línguas.
-
----
-
 *IDJÉ Auditoria algorítmica, governança e alinhamento de IA para o Brasil real.*
