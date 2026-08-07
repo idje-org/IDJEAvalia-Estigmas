@@ -27,8 +27,7 @@ contrastiva pt-BR ↔ EN (efeito de língua).
 │
 └── metadados/
     ├── modelos.csv                        # Mapeamento id/nome/provider
-    ├── estigmas.csv                       # 101 estigmas + rótulo de controle NA
-    └── templates.csv                      # 27 templates
+    └── estigmas.csv                       # 101 estigmas + rótulo de controle NA
 ```
 
 ---
