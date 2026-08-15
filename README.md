@@ -1,10 +1,15 @@
-# ESTIGMA — Pacote de Resultados
+# ESTIGMA — Pacote de resultados
 
-Pacote para verificação independente dos resultados do benchmark ESTIGMABR
-(7 modelos × 7.928 prompts em português do Brasil), incluindo a subanálise
-contrastiva pt-BR ↔ EN (efeito de língua).
+Pacote de resultados agregados da rodada canônica do benchmark Estigmas. Sete
+modelos foram avaliados em 7.626 situações pontuadas por modelo em português
+brasileiro, totalizando 53.382 respostas. O repositório também apresenta a
+subanálise contrastiva pt-BR ↔ EN, com 994 prompts pareados por modelo em cada
+idioma.
 
-**Não é um pacote de reprodutibilidade** (não inclui chaves de API, scripts de avaliação nem o dataset original). 
+Este repositório não publica o dataset, as respostas brutas dos modelos nem os
+scripts de execução. Ele permite consultar os resultados consolidados e
+verificar a integridade dos artefatos disponibilizados, mas não constitui um
+pacote de reprodutibilidade.
 
 ---
 
@@ -18,29 +23,37 @@ contrastiva pt-BR ↔ EN (efeito de língua).
 ├── CHECKSUMS.sha256                     # Manifesto de integridade
 │
 ├── saida/
-│   ├── modelo_1.txt … modelo_9.txt       # Saída canônica do scorer por modelo
-│   └── comparativo_mcnemar.txt           # McNemar pareado entre modelos
+│   ├── modelo_1.txt … modelo_9.txt       # Resultados agregados por modelo
+│   └── comparativo_mcnemar.txt           # Comparação pareada entre modelos
 │
 ├── idioma/                               # Subanálise contrastiva pt-BR ↔ EN
 │   └── saida/
 │       └── comparativo_idioma.txt
 │
 └── metadados/
-    ├── modelos.csv                        # Mapeamento id/nome/provider
-    └── estigmas.csv                       # 101 estigmas + rótulo de controle NA
+    ├── modelos.csv                       # Mapeamento id/nome/provedor
+    └── estigmas.csv                      # 101 estigmas + rótulo de controle NA
 ```
 
 ---
 
-- **Avaliação:** 24 de junho de 2026, temperatura 0, seed 42, via APIs dos serviços de inferência utilizados.
-- **Modelos:** 7 (Llama Scout excluído por instabilidade de formato de resposta).
-- **Estigmas:** 101 estigmas + 1 controle NA = 102 entradas, 27 templates.
+## Dados de referência
+
+- **Avaliação:** 24 de junho de 2026, temperatura 0 e semente 42, via APIs dos serviços de inferência utilizados.
+- **Modelos:** sete modelos, identificados em `metadados/modelos.csv`.
+- **Instrumento:** 101 estigmas e 27 estruturas de pergunta; 7.626 itens pontuados por modelo, dos quais 2.542 apresentam evidência favorável.
+- **Análise de idioma:** 994 prompts pareados por modelo em português brasileiro e inglês.
+
+As fichas apresentam viés, omissão, decisão correta e diagnósticos por estilo,
+perigo percebido, gênero, raça/cor e procedência. O Sabiazinho-4 permanece como
+caso diagnóstico porque supera 50% de omissão nos itens com evidência
+favorável.
 
 ---
 
 ## Verificação de integridade
 
-Na raiz do pacote, execute:
+Na raiz do repositório, execute:
 
 ```bash
 shasum -a 256 -c CHECKSUMS.sha256
@@ -49,22 +62,22 @@ shasum -a 256 -c CHECKSUMS.sha256
 Todos os artefatos listados devem retornar `OK`. O manifesto não inclui o
 próprio arquivo `CHECKSUMS.sha256`.
 
-A licença e a atribuição de terceiros estão documentadas em
+A licença e a atribuição do material de origem estão documentadas em
 `LICENSE-DATA.txt` e `NOTICE.md`.
 
 ---
 
-## O que NÃO está incluído
+## O que não está incluído
 
 | Excluído | Motivo |
 |---|---|
-| `.env` / chaves de API | Credenciais |
-| `evaluate.py` / `eval_en.py` | Requer API; auditoria é offline |
-| `translate.py` / `build_*.py` | Geração do dataset; escopo diferente |
-| `data/raw/` | Entradas somente-leitura do benchmark original |
-| `paper/MATERIAL_DIVULGACAO.md` | Produto final, não artefato de auditoria |
-| Resultados do modelo 7 (Llama Scout) | Excluído do estudo |
+| Dataset e banco integral de prompts | Redução da otimização direta para o benchmark |
+| Respostas brutas dos modelos | O repositório publica apenas resultados agregados |
+| `.env` e chaves de API | Credenciais |
+| Scripts de coleta e pontuação | Fora do escopo deste pacote de resultados |
 
 ---
-*IDJÉ Auditoria algorítmica, governança e alinhamento de IA para o Brasil real.*
-wwww.idje.com.br
+
+*IDJÉ — auditoria algorítmica, governança e alinhamento de IA para o Brasil real.*
+
+[idje.com.br](https://idje.com.br)

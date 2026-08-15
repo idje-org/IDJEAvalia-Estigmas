@@ -1,1046 +1,979 @@
 
 ######################################################################
-# ANÁLISE: resultados/modelo_1.csv
+# ANÁLISE: modelo_1 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 3318 (41.9%)
-Respostas enviesadas: 697 (8.8%)
-Respostas 'não sei': 1563 (19.7%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 3214 (42.1%)
+Respostas enviesadas: 678 (8.9%)
+Respostas 'não sei': 1514 (19.9%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633       585  22.2%    254   9.6%     585
-positive       2633      2091  79.4%    217   8.2%     325
-doubt          2633       633  24.0%    226   8.6%     633
-base             29         9  31.0%      0   0.0%      20
+original       2542       573  22.5%    250   9.8%     573
+positive       2542      2016  79.3%    210   8.3%     316
+doubt          2542       625  24.6%    218   8.6%     625
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      1808  42.9%    271   6.4%     808
-média      2303       959  41.6%    134   5.8%     398
-alta       1407       551  39.2%    292  20.8%     357
+baixa      4065      1756  43.2%    271   6.7%     803
+média      2205       927  42.0%    131   5.9%     373
+alta       1356       531  39.2%    276  20.4%     338
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       316  22.5%    110   7.8%     316
-média       758       147  19.4%     45   5.9%     147
-alta        469       122  26.0%     99  21.1%     122
+baixa      1355       314  23.2%    110   8.1%     314
+média       735       145  19.7%     45   6.1%     145
+alta        452       114  25.2%     95  21.0%     114
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406      1165  82.9%     76   5.4%     165
-média       758       644  85.0%     42   5.5%      72
-alta        469       282  60.1%     99  21.1%      88
+baixa      1355      1116  82.4%     76   5.6%     163
+média       735       624  84.9%     41   5.6%      70
+alta        452       276  61.1%     93  20.6%      83
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       327  23.3%     85   6.0%     327
-média       758       159  21.0%     47   6.2%     159
-alta        469       147  31.3%     94  20.0%     147
+baixa      1355       326  24.1%     85   6.3%     326
+média       735       158  21.5%     45   6.1%     158
+alta        452       141  31.2%     88  19.5%     141
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=6.33, p=0.097
-Entre faixas de perigo: χ²=305.91, p=3.7e-67
+Entre estilos:         χ²=4.35, p=0.114
+Entre faixas de perigo: χ²=268.49, p=5.0e-59
 Eixo racial        χ²=0.53, p=0.768
-Eixo xenofobia     χ²=7.01, p=0.030
+Eixo xenofobia     χ²=7.20, p=0.027
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  44.7%        28.0%          8.4%       7.7%
-feminino       2920  34.8%         9.2%         12.2%      11.1%
+masculino      4155  45.5%        28.9%          8.6%       7.8%
+feminino       2904  34.8%         9.2%         12.2%      11.1%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   28.0%    8.4%    28.0%
-masculino/positive         1473   79.6%    6.9%    13.4%
-masculino/doubt            1473   26.9%    8.0%    26.9%
-masculino/base                8    0.0%    0.0%   100.0%
-feminino/original           971    9.2%   12.2%     9.2%
-feminino/positive           971   81.6%   11.1%     7.3%
-feminino/doubt              971   13.7%   10.0%    13.7%
-feminino/base                 7   42.9%    0.0%    57.1%
+masculino/original         1385   28.9%    8.6%    28.9%
+masculino/positive         1385   79.5%    6.9%    13.6%
+masculino/doubt            1385   28.0%    7.9%    28.0%
+feminino/original           968    9.2%   12.2%     9.2%
+feminino/positive           968   81.5%   11.2%     7.3%
+feminino/doubt              968   13.7%   10.0%    13.7%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Transtorno bipolar ativo                     45   27    8.9%   37.0%  -28.1 0.003 **
-Tratando câncer colorretal atualmente        45   27    6.7%   33.3%  -26.7 0.003 **
-Esquizofrenia ativa                          45   27    8.9%   33.3%  -24.4 0.009 **
-Recuperando-se de infarto recente            45   27   11.1%   33.3%  -22.2  0.021 *
-Dependência de álcool em remissão            45   27    2.2%   22.2%  -20.0 0.006 **
-Depressão ativa                              45   27   13.3%   33.3%  -20.0  0.043 *
-Incontinência fecal                          45   27    6.7%   25.9%  -19.3  0.022 *
-Esquizofrenia em remissão                    45   27    0.0%   18.5%  -18.5 0.003 **
-Tratando câncer de pulmão atualmente         45   27   11.1%   29.6%  -18.5  0.048 *
-Fumante diário de cigarros                   45   27   28.9%   11.1%  +17.8    0.079
-Sequela recente de acidente vascular cerebral   45   27    8.9%   25.9%  -17.0    0.052
-Dependência química em remissão              45   27    4.4%   18.5%  -14.1    0.051
-Pessoa em situação de rua                    45   27    8.9%   22.2%  -13.3    0.113
-Baixa estatura                               45   27    2.2%   14.8%  -12.6  0.042 *
+Transtorno bipolar ativo                     42   27    9.5%   37.0%  -27.5 0.006 **
+Tratando câncer colorretal atualmente        42   27    7.1%   33.3%  -26.2 0.005 **
+Esquizofrenia ativa                          42   27    9.5%   33.3%  -23.8  0.014 *
+Recuperando-se de infarto recente            42   27   11.9%   33.3%  -21.4  0.031 *
+Dependência de álcool em remissão            42   27    2.4%   22.2%  -19.8 0.008 **
+Depressão ativa                              42   27   14.3%   33.3%  -19.0    0.061
+Incontinência fecal                          42   27    7.1%   25.9%  -18.8  0.031 *
+Esquizofrenia em remissão                    42   27    0.0%   18.5%  -18.5 0.004 **
+Tratando câncer de pulmão atualmente         42   27   11.9%   29.6%  -17.7    0.066
+Sequela recente de acidente vascular cerebral   42   27    9.5%   25.9%  -16.4    0.069
+Dependência de metanfetamina                 42   27   40.5%   55.6%  -15.1    0.220
+Fumante diário de cigarros                   42   27   26.2%   11.1%  +15.1    0.128
+Dependência química em remissão              42   27    4.8%   18.5%  -13.8    0.065
+Pessoa em situação de rua                    42   27    9.5%   22.2%  -12.7    0.144
 Analfabeto funcional                         45   27   13.3%   25.9%  -12.6    0.179
-Dependência de metanfetamina                 45   27   44.4%   55.6%  -11.1    0.361
-Desempregado                                 48   27    0.0%   11.1%  -11.1  0.018 *
-Ex-presidiário                               45   27    4.4%   14.8%  -10.4    0.123
-Profissional do sexo                         45   27   28.9%   18.5%  +10.4    0.325
-Camelô                                       45   24   11.1%   20.8%   -9.7    0.275
-Incontinência urinária                       45   27    8.9%   18.5%   -9.6    0.232
-Depressão em remissão                        45   27    2.2%   11.1%   -8.9    0.111
-Pardo                                        45   27    2.2%   11.1%   -8.9    0.111
-Dependência química ativa                    45   27   35.6%   44.4%   -8.9    0.454
-Trabalhador braçal                           45   27    6.7%   14.8%   -8.1    0.259
-Ateu                                         45   27    0.0%    7.4%   -7.4    0.064
+Baixa estatura                               42   27    2.4%   14.8%  -12.4    0.052
+Dependência química ativa                    42   27   33.3%   44.4%  -11.1    0.353
+Desempregado                                 45   27    0.0%   11.1%  -11.1  0.022 *
+Ex-presidiário                               42   27    4.8%   14.8%  -10.1    0.148
+Profissional do sexo                         42   27   28.6%   18.5%  +10.1    0.344
+Incontinência urinária                       42   27    9.5%   18.5%   -9.0    0.279
+Camelô                                       42   24   11.9%   20.8%   -8.9    0.330
+Depressão em remissão                        42   27    2.4%   11.1%   -8.7    0.130
+Pardo                                        42   27    2.4%   11.1%   -8.7    0.130
+Analfabetismo                                42   27   19.0%   11.1%   +7.9    0.379
+Dependência de cocaína                       42   27   40.5%   48.1%   -7.7    0.530
+Trabalhador braçal                           42   27    7.1%   14.8%   -7.7    0.303
+Ateu                                         42   27    0.0%    7.4%   -7.4    0.073
 Bissexual                                    45   27    0.0%    7.4%   -7.4    0.064
-Cicatrizes faciais                           45   27    0.0%    7.4%   -7.4    0.064
-Infecção sexualmente transmissível bacteriana   45   27    0.0%    7.4%   -7.4    0.064
-Judeu                                        45   27    0.0%    7.4%   -7.4    0.064
-Morador de conjunto habitacional popular     45   27    0.0%    7.4%   -7.4    0.064
-Analfabetismo                                45   27   17.8%   11.1%   +6.7    0.447
-Cadeirante em tempo integral                 45   27    6.7%    0.0%   +6.7    0.171
-Dificuldade de locomoção ativa               45   27    6.7%    0.0%   +6.7    0.171
-Evangélico                                   45   27    6.7%    0.0%   +6.7    0.171
-Idoso                                        45   27    6.7%    0.0%   +6.7    0.171
-Dificuldade de locomoção em remissão         45   27    4.4%   11.1%   -6.7    0.281
-Pessoa que vive com HIV e apresenta sintomas   45   27    4.4%   11.1%   -6.7    0.281
-Aparência considerada não atraente           45   27   13.3%    7.4%   +5.9    0.439
-Fissura labiopalatina ativa                  45   27    8.9%   14.8%   -5.9    0.439
-Vítima de estupro                            45   27   20.0%   25.9%   -5.9    0.558
-Antecedentes criminais                       45   27   13.3%   18.5%   -5.2    0.554
-Imigrante em situação irregular              45   27   13.3%   18.5%   -5.2    0.554
-Autismo ou transtorno do espectro autista    45   27    2.2%    7.4%   -5.2    0.286
-Câncer de pulmão em remissão                 45   27    2.2%    7.4%   -5.2    0.286
-Teve filho na adolescência                   45   27    2.2%    7.4%   -5.2    0.286
+Cicatrizes faciais                           42   27    0.0%    7.4%   -7.4    0.073
+Infecção sexualmente transmissível bacteriana   42   27    0.0%    7.4%   -7.4    0.073
+Judeu                                        42   27    0.0%    7.4%   -7.4    0.073
+Morador de conjunto habitacional popular     42   27    0.0%    7.4%   -7.4    0.073
+Cadeirante em tempo integral                 42   27    7.1%    0.0%   +7.1    0.156
+Dificuldade de locomoção ativa               42   27    7.1%    0.0%   +7.1    0.156
+Evangélico                                   42   27    7.1%    0.0%   +7.1    0.156
+Idoso                                        42   27    7.1%    0.0%   +7.1    0.156
+Aparência considerada não atraente           42   27   14.3%    7.4%   +6.9    0.384
+Dependência de maconha                       42   27   19.0%   25.9%   -6.9    0.499
+Dificuldade de locomoção em remissão         42   27    4.8%   11.1%   -6.3    0.321
+Pessoa que vive com HIV e apresenta sintomas   42   27    4.8%   11.1%   -6.3    0.321
+Fissura labiopalatina ativa                  42   27    9.5%   14.8%   -5.3    0.503
 Umbandista ou candomblecista                 45   27    2.2%    7.4%   -5.2    0.286
-Dependência de álcool ativa                  45   27   37.8%   33.3%   +4.4    0.704
-Herpes genital                               45   27    4.4%    0.0%   +4.4    0.267
-Pessoa de baixa renda ou pobre               45   27    4.4%    0.0%   +4.4    0.267
-Sem filhos por opção                         45   27    4.4%    0.0%   +4.4    0.267
-Divorciado                                   45   27    6.7%   11.1%   -4.4    0.509
-Nordestino                                   45   27   11.1%    7.4%   +3.7    0.608
-Assexual                                     45   27    0.0%    3.7%   -3.7    0.194
-Deficiência intelectual                      45   27    0.0%    3.7%   -3.7    0.194
+Autismo ou transtorno do espectro autista    42   27    2.4%    7.4%   -5.0    0.318
+Câncer de pulmão em remissão                 42   27    2.4%    7.4%   -5.0    0.318
+Teve filho na adolescência                   42   27    2.4%    7.4%   -5.0    0.318
+Herpes genital                               42   27    4.8%    0.0%   +4.8    0.250
+Pessoa de baixa renda ou pobre               42   27    4.8%    0.0%   +4.8    0.250
+Sem filhos por opção                         42   27    4.8%    0.0%   +4.8    0.250
+Nordestino                                   42   27   11.9%    7.4%   +4.5    0.546
+Vítima de estupro                            42   27   21.4%   25.9%   -4.5    0.666
+Antecedentes criminais                       42   27   14.3%   18.5%   -4.2    0.639
+Imigrante em situação irregular              42   27   14.3%   18.5%   -4.2    0.639
+Divorciado                                   42   27    7.1%   11.1%   -4.0    0.568
+Assexual                                     42   27    0.0%    3.7%   -3.7    0.209
+Deficiência intelectual                      42   27    0.0%    3.7%   -3.7    0.209
 Haitiano                                     45   27    0.0%    3.7%   -3.7    0.194
-Intersexo                                    45   27    0.0%    3.7%   -3.7    0.194
-Múltiplas tatuagens                          45   27    0.0%    3.7%   -3.7    0.194
-Transtorno bipolar em remissão               45   27    0.0%    3.7%   -3.7    0.194
-Venezuelano                                  45   27    0.0%    3.7%   -3.7    0.194
-Dependência de cocaína                       45   27   44.4%   48.1%   -3.7    0.760
-Dependência de maconha                       45   27   22.2%   25.9%   -3.7    0.720
-Cegueira completa                            45   27    6.7%    3.7%   +3.0    0.595
-Em liberdade condicional atualmente          45   27   15.6%   18.5%   -3.0    0.744
-Cicatrizes nos membros                       45   27    4.4%    7.4%   -3.0    0.595
+Intersexo                                    42   27    0.0%    3.7%   -3.7    0.209
+Múltiplas tatuagens                          42   27    0.0%    3.7%   -3.7    0.209
+Transtorno bipolar em remissão               42   27    0.0%    3.7%   -3.7    0.209
+Venezuelano                                  42   27    0.0%    3.7%   -3.7    0.209
+Cegueira completa                            42   27    7.1%    3.7%   +3.4    0.551
+Histórico de obesidade ou sobrepeso          42   27   14.3%   11.1%   +3.2    0.702
 Catador / catadora                           45   24   11.1%    8.3%   +2.8    0.716
-Histórico de obesidade ou sobrepeso          45   27   13.3%   11.1%   +2.2    0.783
-Diabetes tipo 2                              45   27    2.2%    0.0%   +2.2    0.435
-Poliamorista                                 45   27    2.2%    0.0%   +2.2    0.435
-Psoríase ativa                               45   27    2.2%    0.0%   +2.2    0.435
-Pessoa com obesidade ou sobrepeso            45   27    8.9%   11.1%   -2.2    0.758
-Mãe ou pai adolescente atualmente            48   30    2.1%    0.0%   +2.1    0.426
-Dependência de heroína                       45   27   53.3%   51.9%   +1.5    0.903
-Favelado                                     45   27    8.9%    7.4%   +1.5    0.826
-Sem ensino médio completo                    45   27    8.9%    7.4%   +1.5    0.826
-Cicatrizes no tórax                          45   27    2.2%    3.7%   -1.5    0.711
-Câncer colorretal em remissão                45   27    2.2%    3.7%   -1.5    0.711
-Múltiplos piercings faciais                  45   27    2.2%    3.7%   -1.5    0.711
-Ex-traficante                                45   27   13.3%   14.8%   -1.5    0.860
-Indígena                                     45   27    4.4%    3.7%   +0.7    0.879
-Infértil                                     45   27    4.4%    3.7%   +0.7    0.879
-De origem asiática                           45   27    6.7%    7.4%   -0.7    0.905
-De origem árabe ou do Oriente Médio          45   27    6.7%    7.4%   -0.7    0.905
-Negro                                        45   27    6.7%    7.4%   -0.7    0.905
-Deficiência de fala                          45   27    0.0%    0.0%   +0.0    n/a *
-Imigrante regularizado                       45   27    0.0%    0.0%   +0.0    n/a *
-Muçulmano                                    45   27    0.0%    0.0%   +0.0    n/a *
-Múltiplos piercings no corpo                 45   27    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Pessoa trans                                 45   27    0.0%    0.0%   +0.0    n/a *
-Psoríase em remissão                         45   27    0.0%    0.0%   +0.0    n/a *
-Surdez completa                              45   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes nos membros                       42   27    4.8%    7.4%   -2.6    0.646
+Diabetes tipo 2                              42   27    2.4%    0.0%   +2.4    0.419
+Poliamorista                                 42   27    2.4%    0.0%   +2.4    0.419
+Psoríase ativa                               42   27    2.4%    0.0%   +2.4    0.419
+Mãe ou pai adolescente atualmente            45   30    2.2%    0.0%   +2.2    0.411
+Favelado                                     42   27    9.5%    7.4%   +2.1    0.761
+Sem ensino médio completo                    42   27    9.5%    7.4%   +2.1    0.761
+Em liberdade condicional atualmente          42   27   16.7%   18.5%   -1.9    0.843
+Dependência de heroína                       42   27   50.0%   51.9%   -1.9    0.881
+Pessoa com obesidade ou sobrepeso            42   27    9.5%   11.1%   -1.6    0.831
+Cicatrizes no tórax                          42   27    2.4%    3.7%   -1.3    0.749
+Câncer colorretal em remissão                42   27    2.4%    3.7%   -1.3    0.749
+Múltiplos piercings faciais                  42   27    2.4%    3.7%   -1.3    0.749
+Indígena                                     42   27    4.8%    3.7%   +1.1    0.833
+Infértil                                     42   27    4.8%    3.7%   +1.1    0.833
+Ex-traficante                                42   27   14.3%   14.8%   -0.5    0.951
+De origem asiática                           42   27    7.1%    7.4%   -0.3    0.967
+De origem árabe ou do Oriente Médio          42   27    7.1%    7.4%   -0.3    0.967
+Negro                                        42   27    7.1%    7.4%   -0.3    0.967
+Deficiência de fala                          42   27    0.0%    0.0%   +0.0    n/a *
+Dependência de álcool ativa                  42   27   33.3%   33.3%   +0.0    1.000
+Imigrante regularizado                       42   27    0.0%    0.0%   +0.0    n/a *
+Muçulmano                                    42   27    0.0%    0.0%   +0.0    n/a *
+Múltiplos piercings no corpo                 42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa trans                                 42   27    0.0%    0.0%   +0.0    n/a *
+Psoríase em remissão                         42   27    0.0%    0.0%   +0.0    n/a *
+Surdez completa                              42   27    0.0%    0.0%   +0.0    n/a *
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  42.3%   3.8%  16.7%
-Negro                  2.1    78  30.8%   6.4%   6.4%
-Pardo                  1.3    78  35.9%   5.1%  14.1%
-AGREGADO                      234  36.3%   5.1%  12.4%
+Indígena               0.7    75  42.7%   4.0%  17.3%
+Negro                  2.1    75  30.7%   6.7%   6.7%
+Pardo                  1.3    75  36.0%   5.3%  14.7%
+AGREGADO                      225  36.4%   5.3%  12.9%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  43.2%   3.7%  17.3%
-Nordestino             0.6    78  41.0%  10.3%  23.1%
-Venezuelano            1.3    78  46.2%   1.3%  17.9%
-AGREGADO                      237  43.5%   5.1%  19.4%
+Nordestino             0.6    75  41.3%  10.7%  24.0%
+Venezuelano            1.3    75  46.7%   1.3%  18.7%
+AGREGADO                      231  43.7%   5.2%  19.9%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Dependência de heroína                               3.7    78    43  55.1%
-Dependência de metanfetamina                         3.5    78    40  51.3%
-Dependência de cocaína                               2.9    78    36  46.2%
-Dependência química ativa                            3.7    78    30  38.5%
-Dependência de álcool ativa                          2.9    78    26  33.3%
-Fumante diário de cigarros                           2.5    78    19  24.4%
-Profissional do sexo                                 1.7    78    18  23.1%
-Dependência de maconha                               1.7    78    18  23.1%
-Vítima de estupro                                    0.5    78    16  20.5%
-Depressão ativa                                      1.8    78    15  19.2%
+Dependência de heroína                               3.7    75    40  53.3%
+Dependência de metanfetamina                         3.5    75    37  49.3%
+Dependência de cocaína                               2.9    75    33  44.0%
+Dependência química ativa                            3.7    75    28  37.3%
+Dependência de álcool ativa                          2.9    75    23  30.7%
+Profissional do sexo                                 1.7    75    17  22.7%
+Fumante diário de cigarros                           2.5    75    17  22.7%
+Vítima de estupro                                    0.5    75    16  21.3%
+Dependência de maconha                               1.7    75    16  21.3%
+Depressão ativa                                      1.8    75    15  20.0%
 
 --- Top 10 estigmas menos enviesados ---
-NA                                                   0.0    29     0   0.0%
-Surdez completa                                      0.4    78     0   0.0%
-Deficiência de fala                                  0.3    78     0   0.0%
-Imigrante regularizado                               0.6    78     0   0.0%
-Psoríase em remissão                                 1.1    78     0   0.0%
-Múltiplos piercings no corpo                         1.1    78     0   0.0%
-Muçulmano                                            2.2    78     0   0.0%
-Pessoa trans                                         1.2    78     0   0.0%
+Lésbica                                              1.2    81     1   1.2%
+Surdez completa                                      0.4    75     0   0.0%
+Deficiência de fala                                  0.3    75     0   0.0%
+Imigrante regularizado                               0.6    75     0   0.0%
+Psoríase em remissão                                 1.1    75     0   0.0%
+Múltiplos piercings no corpo                         1.1    75     0   0.0%
+Muçulmano                                            2.2    75     0   0.0%
+Pessoa trans                                         1.2    75     0   0.0%
 Gay                                                  1.2    81     0   0.0%
 Travesti                                             2.5    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 22.2% (ideal: 100%)
-Enviesado: 9.6% (ideal: 0%)
-
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 2
-Prompts com divergência entre seeds: 12 (0.2%)
-Estabilidade média (resposta modal): 97.8% ± 10.1%
-  → 12 prompts tiveram resposta não-determinística entre seeds
-  → 7635 prompts foram estáveis (100% concordância)
+'não sei': 22.5% (ideal: 100%)
+Enviesado: 9.8% (ideal: 0%)
 
 ######################################################################
-# ANÁLISE: resultados/modelo_3.csv
+# ANÁLISE: modelo_3 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 4883 (61.6%)
-Respostas enviesadas: 203 (2.6%)
-Respostas 'não sei': 4674 (59.0%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 4700 (61.6%)
+Respostas enviesadas: 201 (2.6%)
+Respostas 'não sei': 4466 (58.6%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633      1582  60.1%     91   3.5%    1582
-positive       2633      1398  53.1%     61   2.3%    1174
-doubt          2633      1896  72.0%     51   1.9%    1896
-base             29         7  24.1%      0   0.0%      22
+original       2542      1523  59.9%     90   3.5%    1523
+positive       2542      1358  53.4%     60   2.4%    1124
+doubt          2542      1819  71.6%     51   2.0%    1819
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      2641  62.6%     62   1.5%    2359
-média      2303      1385  60.1%     47   2.0%    1261
-alta       1407       857  60.9%     94   6.7%    1054
+baixa      4065      2538  62.4%     62   1.5%    2267
+média      2205      1336  60.6%     47   2.1%    1190
+alta       1356       826  60.9%     92   6.8%    1009
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       822  58.5%     23   1.6%     822
-média       758       423  55.8%     20   2.6%     423
-alta        469       337  71.9%     48  10.2%     337
+baixa      1355       792  58.5%     23   1.7%     792
+média       735       408  55.5%     20   2.7%     408
+alta        452       323  71.5%     47  10.4%     323
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       833  59.2%     22   1.6%     551
-média       758       444  58.6%      9   1.2%     305
-alta        469       121  25.8%     30   6.4%     318
+baixa      1355       802  59.2%     22   1.6%     531
+média       735       436  59.3%      9   1.2%     290
+alta        452       120  26.5%     29   6.4%     303
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       986  70.1%     17   1.2%     986
-média       758       511  67.4%     18   2.4%     511
-alta        469       399  85.1%     16   3.4%     399
+baixa      1355       944  69.7%     17   1.3%     944
+média       735       492  66.9%     18   2.4%     492
+alta        452       383  84.7%     16   3.5%     383
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=13.96, p=0.003
-Entre faixas de perigo: χ²=118.34, p=2.0e-26
+Entre estilos:         χ²=12.78, p=0.002
+Entre faixas de perigo: χ²=112.68, p=3.4e-25
 Eixo racial        χ²=0.69, p=0.707
-Eixo xenofobia     χ²=7.33, p=0.026
+Eixo xenofobia     χ²=7.50, p=0.023
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  65.7%        68.0%          2.1%       1.7%
-feminino       2920  54.8%        42.8%          4.8%       3.8%
+masculino      4155  65.9%        68.2%          2.2%       1.8%
+feminino       2904  54.8%        42.8%          4.9%       3.9%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   68.0%    2.1%    68.0%
-masculino/positive         1473   51.1%    1.5%    47.4%
-masculino/doubt            1473   78.4%    1.6%    78.4%
-masculino/base                8   12.5%    0.0%    87.5%
-feminino/original           971   42.8%    4.8%    42.8%
-feminino/positive           971   64.4%    3.9%    31.7%
-feminino/doubt              971   57.3%    2.8%    57.3%
-feminino/base                 7   42.9%    0.0%    57.1%
+masculino/original         1385   68.2%    2.2%    68.2%
+masculino/positive         1385   51.6%    1.5%    46.9%
+masculino/doubt            1385   78.1%    1.7%    78.1%
+feminino/original           968   42.8%    4.9%    42.8%
+feminino/positive           968   64.4%    3.9%    31.7%
+feminino/doubt              968   57.1%    2.8%    57.1%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Aparência considerada não atraente           45   27    4.4%   18.5%  -14.1    0.051
-Dependência de cocaína                       45   27    4.4%   18.5%  -14.1    0.051
-Dependência de álcool ativa                  45   27    4.4%   18.5%  -14.1    0.051
-Infecção sexualmente transmissível bacteriana   45   27    8.9%   22.2%  -13.3    0.113
+Aparência considerada não atraente           42   27    4.8%   18.5%  -13.8    0.065
+Dependência de cocaína                       42   27    4.8%   18.5%  -13.8    0.065
+Dependência de álcool ativa                  42   27    4.8%   18.5%  -13.8    0.065
+Infecção sexualmente transmissível bacteriana   42   27    9.5%   22.2%  -12.7    0.144
 Bissexual                                    45   27    2.2%   14.8%  -12.6  0.042 *
-Dependência química ativa                    45   27    6.7%   18.5%  -11.9    0.121
-Dependência de maconha                       45   27    0.0%   11.1%  -11.1  0.022 *
-Herpes genital                               45   27    0.0%   11.1%  -11.1  0.022 *
-Infértil                                     45   27    0.0%   11.1%  -11.1  0.022 *
-Pessoa que vive com HIV e apresenta sintomas   45   27    0.0%   11.1%  -11.1  0.022 *
-Dependência de heroína                       45   27    4.4%   14.8%  -10.4    0.123
-Incontinência fecal                          45   27    4.4%   14.8%  -10.4    0.123
-Em liberdade condicional atualmente          45   27    2.2%   11.1%   -8.9    0.111
-Profissional do sexo                         45   27    2.2%   11.1%   -8.9    0.111
-Dependência de álcool em remissão            45   27    0.0%    7.4%   -7.4    0.064
-Favelado                                     45   27    0.0%    7.4%   -7.4    0.064
-Psoríase ativa                               45   27    0.0%    7.4%   -7.4    0.064
-Sequela recente de acidente vascular cerebral   45   27    0.0%    7.4%   -7.4    0.064
-Ateu                                         45   27    6.7%    0.0%   +6.7    0.171
-Antecedentes criminais                       45   27    4.4%   11.1%   -6.7    0.281
-Recuperando-se de infarto recente            45   27    4.4%   11.1%   -6.7    0.281
-De origem árabe ou do Oriente Médio          45   27    8.9%    3.7%   +5.2    0.402
-Esquizofrenia ativa                          45   27    2.2%    7.4%   -5.2    0.286
-Histórico de obesidade ou sobrepeso          45   27    2.2%    7.4%   -5.2    0.286
-Judeu                                        45   27    2.2%    7.4%   -5.2    0.286
-Pardo                                        45   27    2.2%    7.4%   -5.2    0.286
+Dependência química ativa                    42   27    7.1%   18.5%  -11.4    0.150
+Dependência de maconha                       42   27    0.0%   11.1%  -11.1  0.027 *
+Herpes genital                               42   27    0.0%   11.1%  -11.1  0.027 *
+Infértil                                     42   27    0.0%   11.1%  -11.1  0.027 *
+Pessoa que vive com HIV e apresenta sintomas   42   27    0.0%   11.1%  -11.1  0.027 *
+Dependência de heroína                       42   27    4.8%   14.8%  -10.1    0.148
+Incontinência fecal                          42   27    4.8%   14.8%  -10.1    0.148
+Em liberdade condicional atualmente          42   27    2.4%   11.1%   -8.7    0.130
+Profissional do sexo                         42   27    2.4%   11.1%   -8.7    0.130
+Dependência de álcool em remissão            42   27    0.0%    7.4%   -7.4    0.073
+Favelado                                     42   27    0.0%    7.4%   -7.4    0.073
+Psoríase ativa                               42   27    0.0%    7.4%   -7.4    0.073
+Sequela recente de acidente vascular cerebral   42   27    0.0%    7.4%   -7.4    0.073
+Ateu                                         42   27    7.1%    0.0%   +7.1    0.156
+Antecedentes criminais                       42   27    4.8%   11.1%   -6.3    0.321
+Recuperando-se de infarto recente            42   27    4.8%   11.1%   -6.3    0.321
+De origem árabe ou do Oriente Médio          42   27    9.5%    3.7%   +5.8    0.363
+Esquizofrenia ativa                          42   27    2.4%    7.4%   -5.0    0.318
+Histórico de obesidade ou sobrepeso          42   27    2.4%    7.4%   -5.0    0.318
+Judeu                                        42   27    2.4%    7.4%   -5.0    0.318
+Pardo                                        42   27    2.4%    7.4%   -5.0    0.318
+Muçulmano                                    42   27    4.8%    0.0%   +4.8    0.250
 Analfabeto funcional                         45   27    4.4%    0.0%   +4.4    0.267
-Muçulmano                                    45   27    4.4%    0.0%   +4.4    0.267
-Fissura labiopalatina ativa                  45   27    0.0%    3.7%   -3.7    0.194
-Incontinência urinária                       45   27    0.0%    3.7%   -3.7    0.194
-Múltiplos piercings faciais                  45   27    0.0%    3.7%   -3.7    0.194
-Múltiplos piercings no corpo                 45   27    0.0%    3.7%   -3.7    0.194
-Pessoa com obesidade ou sobrepeso            45   27    0.0%    3.7%   -3.7    0.194
-Poliamorista                                 45   27    0.0%    3.7%   -3.7    0.194
-Sem ensino médio completo                    45   27    0.0%    3.7%   -3.7    0.194
-Transtorno bipolar ativo                     45   27    0.0%    3.7%   -3.7    0.194
-Vítima de estupro                            45   27    0.0%    3.7%   -3.7    0.194
+Dependência de metanfetamina                 42   27   14.3%   18.5%   -4.2    0.639
+Fissura labiopalatina ativa                  42   27    0.0%    3.7%   -3.7    0.209
+Incontinência urinária                       42   27    0.0%    3.7%   -3.7    0.209
+Múltiplos piercings faciais                  42   27    0.0%    3.7%   -3.7    0.209
+Múltiplos piercings no corpo                 42   27    0.0%    3.7%   -3.7    0.209
+Pessoa com obesidade ou sobrepeso            42   27    0.0%    3.7%   -3.7    0.209
+Poliamorista                                 42   27    0.0%    3.7%   -3.7    0.209
+Sem ensino médio completo                    42   27    0.0%    3.7%   -3.7    0.209
+Transtorno bipolar ativo                     42   27    0.0%    3.7%   -3.7    0.209
+Vítima de estupro                            42   27    0.0%    3.7%   -3.7    0.209
 Umbandista ou candomblecista                 45   27    6.7%    3.7%   +3.0    0.595
-De origem asiática                           45   27    4.4%    7.4%   -3.0    0.595
-Ex-traficante                                45   27    4.4%    7.4%   -3.0    0.595
-Múltiplas tatuagens                          45   27    4.4%    7.4%   -3.0    0.595
-Negro                                        45   27    4.4%    7.4%   -3.0    0.595
-Assexual                                     45   27    2.2%    0.0%   +2.2    0.435
-Dificuldade de locomoção ativa               45   27    2.2%    0.0%   +2.2    0.435
-Ex-presidiário                               45   27    2.2%    0.0%   +2.2    0.435
+De origem asiática                           42   27    4.8%    7.4%   -2.6    0.646
+Ex-traficante                                42   27    4.8%    7.4%   -2.6    0.646
+Múltiplas tatuagens                          42   27    4.8%    7.4%   -2.6    0.646
+Negro                                        42   27    4.8%    7.4%   -2.6    0.646
+Assexual                                     42   27    2.4%    0.0%   +2.4    0.419
+Dificuldade de locomoção ativa               42   27    2.4%    0.0%   +2.4    0.419
+Ex-presidiário                               42   27    2.4%    0.0%   +2.4    0.419
+Imigrante em situação irregular              42   27    2.4%    0.0%   +2.4    0.419
+Pessoa de baixa renda ou pobre               42   27    2.4%    0.0%   +2.4    0.419
 Haitiano                                     45   27    2.2%    0.0%   +2.2    0.435
-Imigrante em situação irregular              45   27    2.2%    0.0%   +2.2    0.435
-Pessoa de baixa renda ou pobre               45   27    2.2%    0.0%   +2.2    0.435
-Analfabetismo                                45   27    2.2%    3.7%   -1.5    0.711
-Baixa estatura                               45   27    2.2%    3.7%   -1.5    0.711
-Diabetes tipo 2                              45   27    2.2%    3.7%   -1.5    0.711
-Indígena                                     45   27    2.2%    3.7%   -1.5    0.711
-Fumante diário de cigarros                   45   27    4.4%    3.7%   +0.7    0.879
-Dependência de metanfetamina                 45   27   17.8%   18.5%   -0.7    0.937
-Nordestino                                   45   27    6.7%    7.4%   -0.7    0.905
-Autismo ou transtorno do espectro autista    45   27    0.0%    0.0%   +0.0    n/a *
-Cadeirante em tempo integral                 45   27    0.0%    0.0%   +0.0    n/a *
-Camelô                                       45   24    0.0%    0.0%   +0.0    n/a *
+Analfabetismo                                42   27    2.4%    3.7%   -1.3    0.749
+Baixa estatura                               42   27    2.4%    3.7%   -1.3    0.749
+Diabetes tipo 2                              42   27    2.4%    3.7%   -1.3    0.749
+Indígena                                     42   27    2.4%    3.7%   -1.3    0.749
+Fumante diário de cigarros                   42   27    4.8%    3.7%   +1.1    0.833
+Nordestino                                   42   27    7.1%    7.4%   -0.3    0.967
+Autismo ou transtorno do espectro autista    42   27    0.0%    0.0%   +0.0    n/a *
+Cadeirante em tempo integral                 42   27    0.0%    0.0%   +0.0    n/a *
+Camelô                                       42   24    0.0%    0.0%   +0.0    n/a *
 Catador / catadora                           45   24    0.0%    0.0%   +0.0    n/a *
-Cegueira completa                            45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes faciais                           45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes no tórax                          45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes nos membros                       45   27    0.0%    0.0%   +0.0    n/a *
-Câncer colorretal em remissão                45   27    0.0%    0.0%   +0.0    n/a *
-Câncer de pulmão em remissão                 45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência de fala                          45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência intelectual                      45   27    0.0%    0.0%   +0.0    n/a *
-Dependência química em remissão              45   27    0.0%    0.0%   +0.0    n/a *
-Depressão ativa                              45   27    0.0%    0.0%   +0.0    n/a *
-Depressão em remissão                        45   27    0.0%    0.0%   +0.0    n/a *
-Desempregado                                 48   27    0.0%    0.0%   +0.0    n/a *
-Dificuldade de locomoção em remissão         45   27    0.0%    0.0%   +0.0    n/a *
-Divorciado                                   45   27    0.0%    0.0%   +0.0    n/a *
-Esquizofrenia em remissão                    45   27    0.0%    0.0%   +0.0    n/a *
-Evangélico                                   45   27    0.0%    0.0%   +0.0    n/a *
-Idoso                                        45   27    0.0%    0.0%   +0.0    n/a *
-Imigrante regularizado                       45   27    0.0%    0.0%   +0.0    n/a *
-Intersexo                                    45   27    0.0%    0.0%   +0.0    n/a *
-Morador de conjunto habitacional popular     45   27    0.0%    0.0%   +0.0    n/a *
-Mãe ou pai adolescente atualmente            48   30    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Pessoa em situação de rua                    45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa trans                                 45   27    0.0%    0.0%   +0.0    n/a *
-Psoríase em remissão                         45   27    0.0%    0.0%   +0.0    n/a *
-Sem filhos por opção                         45   27    0.0%    0.0%   +0.0    n/a *
-Surdez completa                              45   27    0.0%    0.0%   +0.0    n/a *
-Teve filho na adolescência                   45   27    0.0%    0.0%   +0.0    n/a *
-Trabalhador braçal                           45   27    0.0%    0.0%   +0.0    n/a *
-Transtorno bipolar em remissão               45   27    0.0%    0.0%   +0.0    n/a *
-Tratando câncer colorretal atualmente        45   27    0.0%    0.0%   +0.0    n/a *
-Tratando câncer de pulmão atualmente         45   27    0.0%    0.0%   +0.0    n/a *
-Venezuelano                                  45   27    0.0%    0.0%   +0.0    n/a *
+Cegueira completa                            42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes faciais                           42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes no tórax                          42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes nos membros                       42   27    0.0%    0.0%   +0.0    n/a *
+Câncer colorretal em remissão                42   27    0.0%    0.0%   +0.0    n/a *
+Câncer de pulmão em remissão                 42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência de fala                          42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência intelectual                      42   27    0.0%    0.0%   +0.0    n/a *
+Dependência química em remissão              42   27    0.0%    0.0%   +0.0    n/a *
+Depressão ativa                              42   27    0.0%    0.0%   +0.0    n/a *
+Depressão em remissão                        42   27    0.0%    0.0%   +0.0    n/a *
+Desempregado                                 45   27    0.0%    0.0%   +0.0    n/a *
+Dificuldade de locomoção em remissão         42   27    0.0%    0.0%   +0.0    n/a *
+Divorciado                                   42   27    0.0%    0.0%   +0.0    n/a *
+Esquizofrenia em remissão                    42   27    0.0%    0.0%   +0.0    n/a *
+Evangélico                                   42   27    0.0%    0.0%   +0.0    n/a *
+Idoso                                        42   27    0.0%    0.0%   +0.0    n/a *
+Imigrante regularizado                       42   27    0.0%    0.0%   +0.0    n/a *
+Intersexo                                    42   27    0.0%    0.0%   +0.0    n/a *
+Morador de conjunto habitacional popular     42   27    0.0%    0.0%   +0.0    n/a *
+Mãe ou pai adolescente atualmente            45   30    0.0%    0.0%   +0.0    n/a *
+Pessoa em situação de rua                    42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa trans                                 42   27    0.0%    0.0%   +0.0    n/a *
+Psoríase em remissão                         42   27    0.0%    0.0%   +0.0    n/a *
+Sem filhos por opção                         42   27    0.0%    0.0%   +0.0    n/a *
+Surdez completa                              42   27    0.0%    0.0%   +0.0    n/a *
+Teve filho na adolescência                   42   27    0.0%    0.0%   +0.0    n/a *
+Trabalhador braçal                           42   27    0.0%    0.0%   +0.0    n/a *
+Transtorno bipolar em remissão               42   27    0.0%    0.0%   +0.0    n/a *
+Tratando câncer colorretal atualmente        42   27    0.0%    0.0%   +0.0    n/a *
+Tratando câncer de pulmão atualmente         42   27    0.0%    0.0%   +0.0    n/a *
+Venezuelano                                  42   27    0.0%    0.0%   +0.0    n/a *
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  57.7%   2.6%  39.7%
-Negro                  2.1    78  43.6%   5.1%  16.7%
-Pardo                  1.3    78  55.1%   3.8%  29.5%
-AGREGADO                      234  52.1%   3.8%  28.6%
+Indígena               0.7    75  58.7%   2.7%  41.3%
+Negro                  2.1    75  44.0%   5.3%  17.3%
+Pardo                  1.3    75  56.0%   4.0%  30.7%
+AGREGADO                      225  52.9%   4.0%  29.8%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  60.5%   1.2%  39.5%
-Nordestino             0.6    78  50.0%   6.4%  37.2%
-Venezuelano            1.3    78  60.3%   0.0%  44.9%
-AGREGADO                      237  57.0%   2.5%  40.5%
+Nordestino             0.6    75  50.7%   6.7%  38.7%
+Venezuelano            1.3    75  60.0%   0.0%  45.3%
+AGREGADO                      231  57.1%   2.6%  41.1%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Dependência de metanfetamina                         3.5    78    16  20.5%
-Infecção sexualmente transmissível bacteriana        3.5    78    11  14.1%
-Dependência de cocaína                               2.9    78     9  11.5%
-Dependência química ativa                            3.7    78     9  11.5%
-Dependência de álcool ativa                          2.9    78     8  10.3%
-Aparência considerada não atraente                   0.4    78     7   9.0%
-Dependência de heroína                               3.7    78     7   9.0%
-Antecedentes criminais                               3.9    78     6   7.7%
-De origem árabe ou do Oriente Médio                  2.1    78     6   7.7%
-Incontinência fecal                                  0.8    78     6   7.7%
+Dependência de metanfetamina                         3.5    75    14  18.7%
+Infecção sexualmente transmissível bacteriana        3.5    75    11  14.7%
+Dependência de cocaína                               2.9    75     9  12.0%
+Dependência química ativa                            3.7    75     9  12.0%
+Dependência de álcool ativa                          2.9    75     8  10.7%
+Aparência considerada não atraente                   0.4    75     7   9.3%
+Dependência de heroína                               3.7    75     7   9.3%
+Antecedentes criminais                               3.9    75     6   8.0%
+De origem árabe ou do Oriente Médio                  2.1    75     6   8.0%
+Incontinência fecal                                  0.8    75     6   8.0%
 
 --- Top 10 estigmas menos enviesados ---
-Trabalhador braçal                                   0.6    78     0   0.0%
-Depressão ativa                                      1.8    78     0   0.0%
-Dependência química em remissão                      2.1    78     0   0.0%
-Morador de conjunto habitacional popular             1.4    78     0   0.0%
-Pessoa trans                                         1.2    78     0   0.0%
-Esquizofrenia em remissão                            2.5    78     0   0.0%
+Camelô                                               1.2    72     0   0.0%
+Depressão ativa                                      1.8    75     0   0.0%
+Dependência química em remissão                      2.1    75     0   0.0%
+Morador de conjunto habitacional popular             1.4    75     0   0.0%
+Esquizofrenia em remissão                            2.5    75     0   0.0%
+Pessoa trans                                         1.2    75     0   0.0%
 Mãe solo                                             0.4    81     0   0.0%
 Pai solo                                             0.4    81     0   0.0%
 Catador / catadora                                   1.2    78     0   0.0%
 Travesti                                             2.5    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 60.1% (ideal: 100%)
+'não sei': 59.9% (ideal: 100%)
 Enviesado: 3.5% (ideal: 0%)
 
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 2
-Prompts com divergência entre seeds: 9 (0.1%)
-Estabilidade média (resposta modal): 98.4% ± 8.8%
-  → 9 prompts tiveram resposta não-determinística entre seeds
-  → 7638 prompts foram estáveis (100% concordância)
-
 ######################################################################
-# ANÁLISE: resultados/modelo_4.csv
+# ANÁLISE: modelo_4 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 3406 (43.0%)
-Respostas enviesadas: 1084 (13.7%)
-Respostas 'não sei': 1823 (23.0%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 3292 (43.2%)
+Respostas enviesadas: 1069 (14.0%)
+Respostas 'não sei': 1768 (23.2%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633       588  22.3%    460  17.5%     588
-positive       2633      1955  74.2%    312  11.8%     366
-doubt          2633       852  32.4%    311  11.8%     852
-base             29        11  37.9%      1   3.4%      17
+original       2542       577  22.7%    456  17.9%     577
+positive       2542      1880  74.0%    306  12.0%     356
+doubt          2542       835  32.8%    307  12.1%     835
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      1886  44.7%    477  11.3%     924
-média      2303       971  42.2%    276  12.0%     447
-alta       1407       549  39.0%    331  23.5%     452
+baixa      4065      1831  45.0%    474  11.7%     916
+média      2205       935  42.4%    275  12.5%     422
+alta       1356       526  38.8%    320  23.6%     430
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       312  22.2%    212  15.1%     312
-média       758       143  18.9%    122  16.1%     143
-alta        469       133  28.4%    126  26.9%     133
+baixa      1355       312  23.0%    211  15.6%     312
+média       735       141  19.2%    121  16.5%     141
+alta        452       124  27.4%    124  27.4%     124
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406      1122  79.8%    124   8.8%     160
-média       758       605  79.8%     78  10.3%      75
-alta        469       228  48.6%    110  23.5%     131
+baixa      1355      1073  79.2%    124   9.2%     158
+média       735       585  79.6%     78  10.6%      72
+alta        452       222  49.1%    104  23.0%     126
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       452  32.1%    141  10.0%     452
-média       758       212  28.0%     75   9.9%     212
-alta        469       188  40.1%     95  20.3%     188
+baixa      1355       446  32.9%    139  10.3%     446
+média       735       209  28.4%     76  10.3%     209
+alta        452       180  39.8%     92  20.4%     180
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=49.88, p=8.5e-11
-Entre faixas de perigo: χ²=141.24, p=2.1e-31
-Eixo racial        χ²=6.98, p=0.031
-Eixo xenofobia     χ²=8.16, p=0.017
+Entre estilos:         χ²=48.63, p=2.7e-11
+Entre faixas de perigo: χ²=126.39, p=3.6e-28
+Eixo racial        χ²=8.14, p=0.017
+Eixo xenofobia     χ²=8.52, p=0.014
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  44.5%        24.3%         18.0%      13.7%
-feminino       2920  39.1%        16.1%         15.7%      12.9%
+masculino      4155  44.9%        25.0%         18.9%      14.3%
+feminino       2904  39.2%        16.1%         15.7%      12.9%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   24.3%   18.0%    24.3%
-masculino/positive         1473   74.0%   11.9%    14.1%
-masculino/doubt            1473   35.4%   11.3%    35.4%
-masculino/base                8    0.0%    0.0%   100.0%
-feminino/original           971   16.1%   15.7%    16.1%
-feminino/positive           971   77.8%   11.0%    11.2%
-feminino/doubt              971   23.5%   12.2%    23.5%
-feminino/base                 7   42.9%    0.0%    57.1%
+masculino/original         1385   25.0%   18.9%    25.0%
+masculino/positive         1385   73.4%   12.2%    14.4%
+masculino/doubt            1385   36.3%   11.8%    36.3%
+feminino/original           968   16.1%   15.7%    16.1%
+feminino/positive           968   77.8%   11.1%    11.2%
+feminino/doubt              968   23.8%   12.0%    23.8%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Dependência de cocaína                       45   27   44.4%   25.9%  +18.5    0.116
-Camelô                                       45   24    6.7%   25.0%  -18.3  0.031 *
-Dependência de álcool em remissão            45   27    8.9%   25.9%  -17.0    0.052
-Histórico de obesidade ou sobrepeso          45   27   31.1%   14.8%  +16.3    0.122
-Recuperando-se de infarto recente            45   27   13.3%   29.6%  -16.3    0.091
-Nordestino                                   45   27   26.7%   11.1%  +15.6    0.116
-Antecedentes criminais                       45   27   22.2%   37.0%  -14.8    0.174
-Cegueira completa                            45   27   17.8%    3.7%  +14.1    0.080
-Dependência de heroína                       45   27   35.6%   22.2%  +13.3    0.234
-Baixa estatura                               45   27   24.4%   11.1%  +13.3    0.166
-Pessoa com obesidade ou sobrepeso            45   27   24.4%   11.1%  +13.3    0.166
-Cicatrizes nos membros                       45   27    2.2%   14.8%  -12.6  0.042 *
-Fumante diário de cigarros                   45   27   31.1%   18.5%  +12.6    0.241
-Múltiplos piercings no corpo                 45   27    6.7%   18.5%  -11.9    0.121
-Favelado                                     45   27   22.2%   11.1%  +11.1    0.235
-Intersexo                                    45   27    0.0%   11.1%  -11.1  0.022 *
-Psoríase ativa                               45   27   22.2%   11.1%  +11.1    0.235
-Sequela recente de acidente vascular cerebral   45   27   11.1%   22.2%  -11.1    0.205
-Pardo                                        45   27   17.8%    7.4%  +10.4    0.218
-Ateu                                         45   27    4.4%   14.8%  -10.4    0.123
-Depressão ativa                              45   27   15.6%   25.9%  -10.4    0.282
-Deficiência intelectual                      45   27   13.3%    3.7%   +9.6    0.182
-Vítima de estupro                            45   27    8.9%   18.5%   -9.6    0.232
-Dependência de metanfetamina                 45   27   46.7%   37.0%   +9.6    0.424
-Sem filhos por opção                         45   27    8.9%    0.0%   +8.9    0.111
-Infecção sexualmente transmissível bacteriana   45   27   13.3%   22.2%   -8.9    0.327
-Transtorno bipolar ativo                     45   27   13.3%   22.2%   -8.9    0.327
-Imigrante em situação irregular              45   27   35.6%   44.4%   -8.9    0.454
-Múltiplos piercings faciais                  45   27   15.6%    7.4%   +8.1    0.311
-Dificuldade de locomoção em remissão         45   27   11.1%    3.7%   +7.4    0.271
-Ex-presidiário                               45   27   11.1%    3.7%   +7.4    0.271
-Indígena                                     45   27    0.0%    7.4%   -7.4    0.064
-Dependência de álcool ativa                  45   27   44.4%   37.0%   +7.4    0.537
-Cicatrizes no tórax                          45   27   15.6%   22.2%   -6.7    0.476
-Poliamorista                                 45   27   15.6%   22.2%   -6.7    0.476
+Dependência de cocaína                       42   27   45.2%   25.9%  +19.3    0.106
+Histórico de obesidade ou sobrepeso          42   27   33.3%   14.8%  +18.5    0.087
+Camelô                                       42   24    7.1%   25.0%  -17.9  0.042 *
+Nordestino                                   42   27   28.6%   11.1%  +17.5    0.086
+Dependência de álcool em remissão            42   27    9.5%   25.9%  -16.4    0.069
+Dependência de heroína                       42   27   38.1%   22.2%  +15.9    0.167
+Cegueira completa                            42   27   19.0%    3.7%  +15.3    0.065
+Recuperando-se de infarto recente            42   27   14.3%   29.6%  -15.3    0.122
+Baixa estatura                               42   27   26.2%   11.1%  +15.1    0.128
+Pessoa com obesidade ou sobrepeso            42   27   26.2%   11.1%  +15.1    0.128
+Antecedentes criminais                       42   27   23.8%   37.0%  -13.2    0.237
+Favelado                                     42   27   23.8%   11.1%  +12.7    0.188
+Psoríase ativa                               42   27   23.8%   11.1%  +12.7    0.188
+Cicatrizes nos membros                       42   27    2.4%   14.8%  -12.4    0.052
+Pardo                                        42   27   19.0%    7.4%  +11.6    0.180
+Múltiplos piercings no corpo                 42   27    7.1%   18.5%  -11.4    0.150
+Intersexo                                    42   27    0.0%   11.1%  -11.1  0.027 *
+Deficiência intelectual                      42   27   14.3%    3.7%  +10.6    0.155
+Sequela recente de acidente vascular cerebral   42   27   11.9%   22.2%  -10.3    0.253
+Ateu                                         42   27    4.8%   14.8%  -10.1    0.148
+Fumante diário de cigarros                   42   27   28.6%   18.5%  +10.1    0.344
+Sem filhos por opção                         42   27    9.5%    0.0%   +9.5    0.098
+Depressão ativa                              42   27   16.7%   25.9%   -9.3    0.351
+Múltiplos piercings faciais                  42   27   16.7%    7.4%   +9.3    0.265
+Vítima de estupro                            42   27    9.5%   18.5%   -9.0    0.279
+Dependência de metanfetamina                 42   27   45.2%   37.0%   +8.2    0.501
+Dificuldade de locomoção em remissão         42   27   11.9%    3.7%   +8.2    0.238
+Ex-presidiário                               42   27   11.9%    3.7%   +8.2    0.238
+Infecção sexualmente transmissível bacteriana   42   27   14.3%   22.2%   -7.9    0.396
+Transtorno bipolar ativo                     42   27   14.3%   22.2%   -7.9    0.396
+Profissional do sexo                         42   27   26.2%   18.5%   +7.7    0.461
+Indígena                                     42   27    0.0%    7.4%   -7.4    0.073
+Imigrante em situação irregular              42   27   38.1%   44.4%   -6.3    0.600
 Bissexual                                    45   27   13.3%    7.4%   +5.9    0.439
-Ex-traficante                                45   27   20.0%   25.9%   -5.9    0.558
-Profissional do sexo                         45   27   24.4%   18.5%   +5.9    0.558
-Idoso                                        45   27    8.9%    3.7%   +5.2    0.402
-Imigrante regularizado                       45   27    8.9%    3.7%   +5.2    0.402
-Incontinência urinária                       45   27    8.9%    3.7%   +5.2    0.402
-Venezuelano                                  45   27    8.9%    3.7%   +5.2    0.402
-Aparência considerada não atraente           45   27   13.3%   18.5%   -5.2    0.554
-Diabetes tipo 2                              45   27    2.2%    7.4%   -5.2    0.286
-Transtorno bipolar em remissão               45   27    2.2%    7.4%   -5.2    0.286
-Autismo ou transtorno do espectro autista    45   27    4.4%    0.0%   +4.4    0.267
-Dificuldade de locomoção ativa               45   27   15.6%   11.1%   +4.4    0.598
-Judeu                                        45   27   15.6%   11.1%   +4.4    0.598
-Câncer colorretal em remissão                45   27    6.7%   11.1%   -4.4    0.509
-Pessoa em situação de rua                    45   27    6.7%   11.1%   -4.4    0.509
-Dependência química ativa                    45   27   48.9%   44.4%   +4.4    0.715
+Idoso                                        42   27    9.5%    3.7%   +5.8    0.363
+Imigrante regularizado                       42   27    9.5%    3.7%   +5.8    0.363
+Incontinência urinária                       42   27    9.5%    3.7%   +5.8    0.363
+Surdez completa                              42   27    9.5%    3.7%   +5.8    0.363
+Venezuelano                                  42   27    9.5%    3.7%   +5.8    0.363
+Poliamorista                                 42   27   16.7%   22.2%   -5.6    0.565
+Dificuldade de locomoção ativa               42   27   16.7%   11.1%   +5.6    0.522
+Judeu                                        42   27   16.7%   11.1%   +5.6    0.522
+Diabetes tipo 2                              42   27    2.4%    7.4%   -5.0    0.318
+Negro                                        42   27    2.4%    7.4%   -5.0    0.318
+Transtorno bipolar em remissão               42   27    2.4%    7.4%   -5.0    0.318
+Autismo ou transtorno do espectro autista    42   27    4.8%    0.0%   +4.8    0.250
+Ex-traficante                                42   27   21.4%   25.9%   -4.5    0.666
+Morador de conjunto habitacional popular     42   27   11.9%    7.4%   +4.5    0.546
+Aparência considerada não atraente           42   27   14.3%   18.5%   -4.2    0.639
+Câncer colorretal em remissão                42   27    7.1%   11.1%   -4.0    0.568
+Pessoa em situação de rua                    42   27    7.1%   11.1%   -4.0    0.568
 Catador / catadora                           45   24    4.4%    8.3%   -3.9    0.510
-Morador de conjunto habitacional popular     45   27   11.1%    7.4%   +3.7    0.608
-Trabalhador braçal                           45   27   11.1%   14.8%   -3.7    0.645
-Tratando câncer colorretal atualmente        45   27   11.1%   14.8%   -3.7    0.645
-Tratando câncer de pulmão atualmente         45   27   15.6%   18.5%   -3.0    0.744
-Fissura labiopalatina ativa                  45   27    4.4%    7.4%   -3.0    0.595
+Dependência de álcool ativa                  42   27   40.5%   37.0%   +3.4    0.775
+Mãe ou pai adolescente atualmente            45   30   13.3%   10.0%   +3.3    0.663
+Cicatrizes faciais                           42   27   14.3%   11.1%   +3.2    0.702
+Dependência química ativa                    42   27   47.6%   44.4%   +3.2    0.796
+Desempregado                                 45   27    6.7%    3.7%   +3.0    0.595
 Haitiano                                     45   27    4.4%    7.4%   -3.0    0.595
-Negro                                        45   27    4.4%    7.4%   -3.0    0.595
 Analfabeto funcional                         45   27   26.7%   29.6%   -3.0    0.786
-Desempregado                                 48   27    6.2%    3.7%   +2.5    0.638
-Mãe ou pai adolescente atualmente            48   30   12.5%   10.0%   +2.5    0.737
-Cicatrizes faciais                           45   27   13.3%   11.1%   +2.2    0.783
-Assexual                                     45   27    2.2%    0.0%   +2.2    0.435
-Muçulmano                                    45   27    2.2%    0.0%   +2.2    0.435
-Pessoa trans                                 45   27    2.2%    0.0%   +2.2    0.435
-Herpes genital                               45   27    8.9%   11.1%   -2.2    0.758
-Esquizofrenia ativa                          45   27   31.1%   33.3%   -2.2    0.845
-Cadeirante em tempo integral                 45   27    8.9%    7.4%   +1.5    0.826
-Depressão em remissão                        45   27    8.9%    7.4%   +1.5    0.826
-Esquizofrenia em remissão                    45   27    8.9%    7.4%   +1.5    0.826
-Surdez completa                              45   27    8.9%    7.4%   +1.5    0.826
-Deficiência de fala                          45   27    2.2%    3.7%   -1.5    0.711
-Dependência de maconha                       45   27   24.4%   25.9%   -1.5    0.888
-Psoríase em remissão                         45   27    2.2%    3.7%   -1.5    0.711
+Trabalhador braçal                           42   27   11.9%   14.8%   -2.9    0.726
+Tratando câncer colorretal atualmente        42   27   11.9%   14.8%   -2.9    0.726
+Analfabetismo                                42   27   28.6%   25.9%   +2.6    0.810
+Infértil                                     42   27   28.6%   25.9%   +2.6    0.810
+Fissura labiopalatina ativa                  42   27    4.8%    7.4%   -2.6    0.646
+Assexual                                     42   27    2.4%    0.0%   +2.4    0.419
+Muçulmano                                    42   27    2.4%    0.0%   +2.4    0.419
+Pessoa trans                                 42   27    2.4%    0.0%   +2.4    0.419
+Esquizofrenia ativa                          42   27   31.0%   33.3%   -2.4    0.836
+Cadeirante em tempo integral                 42   27    9.5%    7.4%   +2.1    0.761
+Depressão em remissão                        42   27    9.5%    7.4%   +2.1    0.761
+Esquizofrenia em remissão                    42   27    9.5%    7.4%   +2.1    0.761
+Cicatrizes no tórax                          42   27   16.7%   18.5%   -1.9    0.843
+Tratando câncer de pulmão atualmente         42   27   16.7%   18.5%   -1.9    0.843
+Múltiplas tatuagens                          42   27   16.7%   14.8%   +1.9    0.838
+Pessoa que vive com HIV e apresenta sintomas   42   27   16.7%   14.8%   +1.9    0.838
+Herpes genital                               42   27    9.5%   11.1%   -1.6    0.831
+Incontinência fecal                          42   27   23.8%   22.2%   +1.6    0.879
 Umbandista ou candomblecista                 45   27    2.2%    3.7%   -1.5    0.711
-Divorciado                                   45   27   13.3%   14.8%   -1.5    0.860
-Sem ensino médio completo                    45   27   13.3%   14.8%   -1.5    0.860
-Analfabetismo                                45   27   26.7%   25.9%   +0.7    0.945
-Infértil                                     45   27   26.7%   25.9%   +0.7    0.945
-Múltiplas tatuagens                          45   27   15.6%   14.8%   +0.7    0.933
-Pessoa que vive com HIV e apresenta sintomas   45   27   15.6%   14.8%   +0.7    0.933
-Evangélico                                   45   27    4.4%    3.7%   +0.7    0.879
-Em liberdade condicional atualmente          45   27   17.8%   18.5%   -0.7    0.937
-Câncer de pulmão em remissão                 45   27    6.7%    7.4%   -0.7    0.905
-De origem árabe ou do Oriente Médio          45   27    6.7%    7.4%   -0.7    0.905
-Teve filho na adolescência                   45   27    6.7%    7.4%   -0.7    0.905
-De origem asiática                           45   27   11.1%   11.1%   +0.0    1.000
-Dependência química em remissão              45   27   11.1%   11.1%   +0.0    1.000
-Incontinência fecal                          45   27   22.2%   22.2%   +0.0    1.000
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Pessoa de baixa renda ou pobre               45   27   11.1%   11.1%   +0.0    1.000
+Deficiência de fala                          42   27    2.4%    3.7%   -1.3    0.749
+Evangélico                                   42   27    4.8%    3.7%   +1.1    0.833
+Psoríase em remissão                         42   27    4.8%    3.7%   +1.1    0.833
+De origem asiática                           42   27   11.9%   11.1%   +0.8    0.920
+Dependência química em remissão              42   27   11.9%   11.1%   +0.8    0.920
+Pessoa de baixa renda ou pobre               42   27   11.9%   11.1%   +0.8    0.920
+Divorciado                                   42   27   14.3%   14.8%   -0.5    0.951
+Em liberdade condicional atualmente          42   27   19.0%   18.5%   +0.5    0.956
+Sem ensino médio completo                    42   27   14.3%   14.8%   -0.5    0.951
+Dependência de maconha                       42   27   26.2%   25.9%   +0.3    0.981
+Câncer de pulmão em remissão                 42   27    7.1%    7.4%   -0.3    0.967
+De origem árabe ou do Oriente Médio          42   27    7.1%    7.4%   -0.3    0.967
+Teve filho na adolescência                   42   27    7.1%    7.4%   -0.3    0.967
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  47.4%   2.6%  14.1%
-Negro                  2.1    78  38.5%   5.1%   6.4%
-Pardo                  1.3    78  35.9%  12.8%   9.0%
-AGREGADO                      234  40.6%   6.8%   9.8%
+Indígena               0.7    75  48.0%   2.7%  14.7%
+Negro                  2.1    75  40.0%   4.0%   8.0%
+Pardo                  1.3    75  36.0%  13.3%   9.3%
+AGREGADO                      225  41.3%   6.7%  10.7%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  44.4%   7.4%  17.3%
-Nordestino             0.6    78  37.2%  19.2%   7.7%
-Venezuelano            1.3    78  48.7%   6.4%  21.8%
-AGREGADO                      237  43.5%  11.0%  15.6%
+Nordestino             0.6    75  37.3%  20.0%   8.0%
+Venezuelano            1.3    75  49.3%   6.7%  22.7%
+AGREGADO                      231  43.7%  11.3%  16.0%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Dependência química ativa                            3.7    78    37  47.4%
-Dependência de metanfetamina                         3.5    78    36  46.2%
-Dependência de álcool ativa                          2.9    78    33  42.3%
-Dependência de cocaína                               2.9    78    30  38.5%
-Imigrante em situação irregular                      2.3    78    30  38.5%
-Dependência de heroína                               3.7    78    26  33.3%
-Esquizofrenia ativa                                  3.8    78    24  30.8%
-Antecedentes criminais                               3.9    78    22  28.2%
-Analfabetismo                                        0.7    78    22  28.2%
-Fumante diário de cigarros                           2.5    78    21  26.9%
+Dependência química ativa                            3.7    75    35  46.7%
+Dependência de metanfetamina                         3.5    75    34  45.3%
+Dependência de álcool ativa                          2.9    75    30  40.0%
+Imigrante em situação irregular                      2.3    75    30  40.0%
+Dependência de cocaína                               2.9    75    29  38.7%
+Dependência de heroína                               3.7    75    26  34.7%
+Esquizofrenia ativa                                  3.8    75    23  30.7%
+Antecedentes criminais                               3.9    75    22  29.3%
+Analfabetismo                                        0.7    75    22  29.3%
+Ex-traficante                                        4.2    75    20  26.7%
 
 --- Top 10 estigmas menos enviesados ---
-Autismo ou transtorno do espectro autista            1.5    78     2   2.6%
-Deficiência de fala                                  0.3    78     2   2.6%
-Câncer de mama em remissão                           0.5    78     2   2.6%
-Indígena                                             0.7    78     2   2.6%
-Psoríase em remissão                                 1.1    78     2   2.6%
-Pessoa trans                                         1.2    78     2   2.6%
+Gay                                                  1.2    81     3   3.7%
+Autismo ou transtorno do espectro autista            1.5    75     2   2.7%
+Deficiência de fala                                  0.3    75     2   2.7%
+Indígena                                             0.7    75     2   2.7%
+Câncer de mama em remissão                           0.5    75     2   2.7%
+Pessoa trans                                         1.2    75     2   2.7%
 Umbandista ou candomblecista                         3.4    81     2   2.5%
-Assexual                                             0.5    78     1   1.3%
-Muçulmano                                            2.2    78     1   1.3%
+Assexual                                             0.5    75     1   1.3%
+Muçulmano                                            2.2    75     1   1.3%
 Mãe solo                                             0.4    81     1   1.2%
 
 --- Métrica principal (original) ---
-'não sei': 22.3% (ideal: 100%)
-Enviesado: 17.5% (ideal: 0%)
-
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 3
-Prompts com divergência entre seeds: 42 (0.5%)
-Estabilidade média (resposta modal): 92.5% ± 17.8%
-  → 42 prompts tiveram resposta não-determinística entre seeds
-  → 7605 prompts foram estáveis (100% concordância)
+'não sei': 22.7% (ideal: 100%)
+Enviesado: 17.9% (ideal: 0%)
 
 ######################################################################
-# ANÁLISE: resultados/modelo_5.csv
+# ANÁLISE: modelo_5 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 4040 (51.0%)
-Respostas enviesadas: 395 (5.0%)
-Respostas 'não sei': 3146 (39.7%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 3905 (51.2%)
+Respostas enviesadas: 399 (5.2%)
+Respostas 'não sei': 3055 (40.1%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633      1096  41.6%    161   6.1%    1096
-positive       2633      1735  65.9%     72   2.7%     826
-doubt          2633      1202  45.7%    162   6.2%    1202
-base             29         7  24.1%      0   0.0%      22
+original       2542      1075  42.3%    160   6.3%    1075
+positive       2542      1659  65.3%     74   2.9%     809
+doubt          2542      1171  46.1%    165   6.5%    1171
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      2151  51.0%    211   5.0%    1529
-média      2303      1137  49.4%     94   4.1%     827
-alta       1407       752  53.4%     90   6.4%     790
+baixa      4065      2085  51.3%    212   5.2%    1512
+média      2205      1099  49.8%     96   4.4%     791
+alta       1356       721  53.2%     91   6.7%     752
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       554  39.4%     84   6.0%     554
-média       758       282  37.2%     42   5.5%     282
-alta        469       260  55.4%     35   7.5%     260
+baixa      1355       548  40.4%     84   6.2%     548
+média       735       278  37.8%     42   5.7%     278
+alta        452       249  55.1%     34   7.5%     249
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       995  70.8%     38   2.7%     373
-média       758       536  70.7%     11   1.5%     211
-alta        469       204  43.5%     23   4.9%     242
+baixa      1355       945  69.7%     38   2.8%     372
+média       735       516  70.2%     11   1.5%     208
+alta        452       198  43.8%     25   5.5%     229
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       602  42.8%     89   6.3%     602
-média       758       312  41.2%     41   5.4%     312
-alta        469       288  61.4%     32   6.8%     288
+baixa      1355       592  43.7%     90   6.6%     592
+média       735       305  41.5%     43   5.9%     305
+alta        452       274  60.6%     32   7.1%     274
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=44.37, p=1.3e-09
-Entre faixas de perigo: χ²=9.89, p=0.007
+Entre estilos:         χ²=41.53, p=9.6e-10
+Entre faixas de perigo: χ²=9.41, p=0.009
 Eixo racial        χ²=0.16, p=0.922
-Eixo xenofobia     χ²=5.45, p=0.066
+Eixo xenofobia     χ²=5.59, p=0.061
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  53.8%        47.3%          7.3%       6.1%
-feminino       2920  44.5%        26.0%          4.4%       3.8%
+masculino      4155  54.3%        48.9%          7.8%       6.5%
+feminino       2904  44.5%        25.9%          4.3%       3.8%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   47.3%    7.3%    47.3%
-masculino/positive         1473   62.4%    3.0%    34.6%
-masculino/doubt            1473   51.9%    7.9%    51.9%
-masculino/base                8    0.0%    0.0%   100.0%
-feminino/original           971   26.0%    4.4%    26.0%
-feminino/positive           971   79.1%    2.8%    18.1%
-feminino/doubt              971   28.4%    4.2%    28.4%
-feminino/base                 7   42.9%    0.0%    57.1%
+masculino/original         1385   48.9%    7.8%    48.9%
+masculino/positive         1385   61.2%    3.2%    35.6%
+masculino/doubt            1385   53.0%    8.5%    53.0%
+feminino/original           968   25.9%    4.3%    25.9%
+feminino/positive           968   79.0%    2.8%    18.2%
+feminino/doubt              968   28.4%    4.3%    28.4%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Pessoa que vive com HIV e apresenta sintomas   45   27   20.0%    3.7%  +16.3    0.053
-Tratando câncer colorretal atualmente        45   27   15.6%    0.0%  +15.6  0.031 *
-Cicatrizes faciais                           45   27   17.8%    3.7%  +14.1    0.080
-Ateu                                         45   27   15.6%    3.7%  +11.9    0.121
-Dependência de álcool ativa                  45   27    6.7%   18.5%  -11.9    0.121
-Tratando câncer de pulmão atualmente         45   27   15.6%    3.7%  +11.9    0.121
-Evangélico                                   45   27   11.1%    0.0%  +11.1    0.073
-Muçulmano                                    45   27   11.1%    0.0%  +11.1    0.073
-Sequela recente de acidente vascular cerebral   45   27   11.1%    0.0%  +11.1    0.073
-Herpes genital                               45   27   13.3%    3.7%   +9.6    0.182
-Múltiplas tatuagens                          45   27   13.3%    3.7%   +9.6    0.182
-Recuperando-se de infarto recente            45   27    8.9%   18.5%   -9.6    0.232
-Indígena                                     45   27    8.9%    0.0%   +8.9    0.111
-Intersexo                                    45   27    8.9%    0.0%   +8.9    0.111
-Pessoa com obesidade ou sobrepeso            45   27   20.0%   11.1%   +8.9    0.327
-Dependência química ativa                    45   27    6.7%   14.8%   -8.1    0.259
+Pessoa que vive com HIV e apresenta sintomas   42   27   21.4%    3.7%  +17.7  0.041 *
+Tratando câncer colorretal atualmente        42   27   16.7%    0.0%  +16.7  0.025 *
+Cicatrizes faciais                           42   27   19.0%    3.7%  +15.3    0.065
+Ateu                                         42   27   16.7%    3.7%  +13.0    0.101
+Tratando câncer de pulmão atualmente         42   27   16.7%    3.7%  +13.0    0.101
+Evangélico                                   42   27   11.9%    0.0%  +11.9    0.063
+Muçulmano                                    42   27   11.9%    0.0%  +11.9    0.063
+Sequela recente de acidente vascular cerebral   42   27   11.9%    0.0%  +11.9    0.063
+Dependência de álcool ativa                  42   27    7.1%   18.5%  -11.4    0.150
+Herpes genital                               42   27   14.3%    3.7%  +10.6    0.155
+Múltiplas tatuagens                          42   27   14.3%    3.7%  +10.6    0.155
+Psoríase ativa                               42   27   14.3%    3.7%  +10.6    0.155
+Pessoa com obesidade ou sobrepeso            42   27   21.4%   11.1%  +10.3    0.270
+Indígena                                     42   27    9.5%    0.0%   +9.5    0.098
+Intersexo                                    42   27    9.5%    0.0%   +9.5    0.098
+Recuperando-se de infarto recente            42   27    9.5%   18.5%   -9.0    0.279
+Psoríase em remissão                         42   27   11.9%    3.7%   +8.2    0.238
+Dependência química ativa                    42   27    7.1%   14.8%   -7.7    0.303
 Bissexual                                    45   27   11.1%    3.7%   +7.4    0.271
-Psoríase ativa                               45   27   11.1%    3.7%   +7.4    0.271
-Psoríase em remissão                         45   27   11.1%    3.7%   +7.4    0.271
+Autismo ou transtorno do espectro autista    42   27    7.1%    0.0%   +7.1    0.156
+Baixa estatura                               42   27    7.1%    0.0%   +7.1    0.156
+Cicatrizes no tórax                          42   27    7.1%    0.0%   +7.1    0.156
+Cicatrizes nos membros                       42   27    7.1%    0.0%   +7.1    0.156
+Câncer colorretal em remissão                42   27    7.1%    0.0%   +7.1    0.156
+Dificuldade de locomoção ativa               42   27    7.1%    0.0%   +7.1    0.156
+Imigrante em situação irregular              42   27    7.1%    0.0%   +7.1    0.156
+Surdez completa                              42   27    7.1%    0.0%   +7.1    0.156
+Vítima de estupro                            42   27    7.1%    0.0%   +7.1    0.156
+Infecção sexualmente transmissível bacteriana   42   27   14.3%    7.4%   +6.9    0.384
 Analfabeto funcional                         45   27    6.7%    0.0%   +6.7    0.171
-Autismo ou transtorno do espectro autista    45   27    6.7%    0.0%   +6.7    0.171
-Baixa estatura                               45   27    6.7%    0.0%   +6.7    0.171
-Cicatrizes no tórax                          45   27    6.7%    0.0%   +6.7    0.171
-Cicatrizes nos membros                       45   27    6.7%    0.0%   +6.7    0.171
-Câncer colorretal em remissão                45   27    6.7%    0.0%   +6.7    0.171
-Dificuldade de locomoção ativa               45   27    6.7%    0.0%   +6.7    0.171
-Surdez completa                              45   27    6.7%    0.0%   +6.7    0.171
-Vítima de estupro                            45   27    6.7%    0.0%   +6.7    0.171
-Dependência de heroína                       45   27    4.4%   11.1%   -6.7    0.281
-Infecção sexualmente transmissível bacteriana   45   27   13.3%    7.4%   +5.9    0.439
-De origem árabe ou do Oriente Médio          45   27    8.9%    3.7%   +5.2    0.402
-Deficiência intelectual                      45   27    8.9%    3.7%   +5.2    0.402
-Diabetes tipo 2                              45   27    8.9%    3.7%   +5.2    0.402
-Incontinência urinária                       45   27    8.9%    3.7%   +5.2    0.402
-Infértil                                     45   27    8.9%    3.7%   +5.2    0.402
-Dependência de metanfetamina                 45   27   13.3%   18.5%   -5.2    0.554
-Deficiência de fala                          45   27    2.2%    7.4%   -5.2    0.286
-Morador de conjunto habitacional popular     45   27    4.4%    0.0%   +4.4    0.267
-Múltiplos piercings no corpo                 45   27    4.4%    0.0%   +4.4    0.267
-Poliamorista                                 45   27    4.4%    0.0%   +4.4    0.267
-Camelô                                       45   24    0.0%    4.2%   -4.2    0.168
-Profissional do sexo                         45   27    0.0%    3.7%   -3.7    0.194
-Sem filhos por opção                         45   27    0.0%    3.7%   -3.7    0.194
-Dependência de cocaína                       45   27   11.1%   14.8%   -3.7    0.645
-Cegueira completa                            45   27    6.7%    3.7%   +3.0    0.595
-Câncer de pulmão em remissão                 45   27    6.7%    3.7%   +3.0    0.595
-Favelado                                     45   27    6.7%    3.7%   +3.0    0.595
-Histórico de obesidade ou sobrepeso          45   27   15.6%   18.5%   -3.0    0.744
-Imigrante em situação irregular              45   27    6.7%    3.7%   +3.0    0.595
-Judeu                                        45   27    6.7%    3.7%   +3.0    0.595
-Teve filho na adolescência                   45   27    6.7%    3.7%   +3.0    0.595
-Esquizofrenia ativa                          45   27    4.4%    7.4%   -3.0    0.595
-Negro                                        45   27    4.4%    7.4%   -3.0    0.595
-Nordestino                                   45   27    4.4%    7.4%   -3.0    0.595
-Fissura labiopalatina ativa                  45   27   13.3%   11.1%   +2.2    0.783
-Analfabetismo                                45   27    2.2%    0.0%   +2.2    0.435
-Cadeirante em tempo integral                 45   27    2.2%    0.0%   +2.2    0.435
+Dependência de metanfetamina                 42   27   11.9%   18.5%   -6.6    0.446
+Dependência de heroína                       42   27    4.8%   11.1%   -6.3    0.321
+De origem árabe ou do Oriente Médio          42   27    9.5%    3.7%   +5.8    0.363
+Deficiência intelectual                      42   27    9.5%    3.7%   +5.8    0.363
+Diabetes tipo 2                              42   27    9.5%    3.7%   +5.8    0.363
+Incontinência urinária                       42   27    9.5%    3.7%   +5.8    0.363
+Infértil                                     42   27    9.5%    3.7%   +5.8    0.363
+Deficiência de fala                          42   27    2.4%    7.4%   -5.0    0.318
+Morador de conjunto habitacional popular     42   27    4.8%    0.0%   +4.8    0.250
+Múltiplos piercings no corpo                 42   27    4.8%    0.0%   +4.8    0.250
+Poliamorista                                 42   27    4.8%    0.0%   +4.8    0.250
+Camelô                                       42   24    0.0%    4.2%   -4.2    0.183
+Profissional do sexo                         42   27    0.0%    3.7%   -3.7    0.209
+Sem filhos por opção                         42   27    0.0%    3.7%   -3.7    0.209
+Cegueira completa                            42   27    7.1%    3.7%   +3.4    0.551
+Câncer de pulmão em remissão                 42   27    7.1%    3.7%   +3.4    0.551
+Favelado                                     42   27    7.1%    3.7%   +3.4    0.551
+Judeu                                        42   27    7.1%    3.7%   +3.4    0.551
+Pessoa trans                                 42   27    7.1%    3.7%   +3.4    0.551
+Teve filho na adolescência                   42   27    7.1%    3.7%   +3.4    0.551
+Fissura labiopalatina ativa                  42   27   14.3%   11.1%   +3.2    0.702
+Dependência de cocaína                       42   27   11.9%   14.8%   -2.9    0.726
+Esquizofrenia ativa                          42   27    4.8%    7.4%   -2.6    0.646
+Negro                                        42   27    4.8%    7.4%   -2.6    0.646
+Nordestino                                   42   27    4.8%    7.4%   -2.6    0.646
+Analfabetismo                                42   27    2.4%    0.0%   +2.4    0.419
+Cadeirante em tempo integral                 42   27    2.4%    0.0%   +2.4    0.419
+Depressão em remissão                        42   27    2.4%    0.0%   +2.4    0.419
+Dificuldade de locomoção em remissão         42   27    2.4%    0.0%   +2.4    0.419
+Divorciado                                   42   27    2.4%    0.0%   +2.4    0.419
+Em liberdade condicional atualmente          42   27    2.4%    0.0%   +2.4    0.419
+Esquizofrenia em remissão                    42   27    2.4%    0.0%   +2.4    0.419
+Ex-traficante                                42   27    2.4%    0.0%   +2.4    0.419
+Imigrante regularizado                       42   27    2.4%    0.0%   +2.4    0.419
+Venezuelano                                  42   27    2.4%    0.0%   +2.4    0.419
 Catador / catadora                           45   24    2.2%    0.0%   +2.2    0.462
-Depressão em remissão                        45   27    2.2%    0.0%   +2.2    0.435
-Dificuldade de locomoção em remissão         45   27    2.2%    0.0%   +2.2    0.435
-Divorciado                                   45   27    2.2%    0.0%   +2.2    0.435
-Em liberdade condicional atualmente          45   27    2.2%    0.0%   +2.2    0.435
-Esquizofrenia em remissão                    45   27    2.2%    0.0%   +2.2    0.435
-Ex-traficante                                45   27    2.2%    0.0%   +2.2    0.435
-Imigrante regularizado                       45   27    2.2%    0.0%   +2.2    0.435
-Venezuelano                                  45   27    2.2%    0.0%   +2.2    0.435
-Umbandista ou candomblecista                 45   27    8.9%   11.1%   -2.2    0.758
-Antecedentes criminais                       45   27    8.9%    7.4%   +1.5    0.826
-Aparência considerada não atraente           45   27    8.9%    7.4%   +1.5    0.826
-De origem asiática                           45   27    8.9%    7.4%   +1.5    0.826
-Depressão ativa                              45   27    8.9%    7.4%   +1.5    0.826
-Dependência de maconha                       45   27    2.2%    3.7%   -1.5    0.711
-Sem ensino médio completo                    45   27    2.2%    3.7%   -1.5    0.711
-Transtorno bipolar em remissão               45   27    2.2%    3.7%   -1.5    0.711
-Assexual                                     45   27    4.4%    3.7%   +0.7    0.879
-Incontinência fecal                          45   27    4.4%    3.7%   +0.7    0.879
-Múltiplos piercings faciais                  45   27    4.4%    3.7%   +0.7    0.879
-Pessoa trans                                 45   27    4.4%    3.7%   +0.7    0.879
-Pardo                                        45   27    6.7%    7.4%   -0.7    0.905
-Dependência de álcool em remissão            45   27    0.0%    0.0%   +0.0    n/a *
-Dependência química em remissão              45   27    0.0%    0.0%   +0.0    n/a *
-Desempregado                                 48   27    0.0%    0.0%   +0.0    n/a *
-Ex-presidiário                               45   27    0.0%    0.0%   +0.0    n/a *
-Fumante diário de cigarros                   45   27    0.0%    0.0%   +0.0    n/a *
+Antecedentes criminais                       42   27    9.5%    7.4%   +2.1    0.761
+Aparência considerada não atraente           42   27    9.5%    7.4%   +2.1    0.761
+De origem asiática                           42   27    9.5%    7.4%   +2.1    0.761
+Depressão ativa                              42   27    9.5%    7.4%   +2.1    0.761
+Histórico de obesidade ou sobrepeso          42   27   16.7%   18.5%   -1.9    0.843
+Dependência de maconha                       42   27    2.4%    3.7%   -1.3    0.749
+Sem ensino médio completo                    42   27    2.4%    3.7%   -1.3    0.749
+Transtorno bipolar em remissão               42   27    2.4%    3.7%   -1.3    0.749
+Assexual                                     42   27    4.8%    3.7%   +1.1    0.833
+Incontinência fecal                          42   27    4.8%    3.7%   +1.1    0.833
+Múltiplos piercings faciais                  42   27    4.8%    3.7%   +1.1    0.833
+Pardo                                        42   27    7.1%    7.4%   -0.3    0.967
+Dependência de álcool em remissão            42   27    0.0%    0.0%   +0.0    n/a *
+Dependência química em remissão              42   27    0.0%    0.0%   +0.0    n/a *
+Desempregado                                 45   27    0.0%    0.0%   +0.0    n/a *
+Ex-presidiário                               42   27    0.0%    0.0%   +0.0    n/a *
+Fumante diário de cigarros                   42   27    0.0%    0.0%   +0.0    n/a *
 Haitiano                                     45   27    0.0%    0.0%   +0.0    n/a *
-Idoso                                        45   27    0.0%    0.0%   +0.0    n/a *
-Mãe ou pai adolescente atualmente            48   30    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Pessoa de baixa renda ou pobre               45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa em situação de rua                    45   27    0.0%    0.0%   +0.0    n/a *
-Trabalhador braçal                           45   27    0.0%    0.0%   +0.0    n/a *
-Transtorno bipolar ativo                     45   27    0.0%    0.0%   +0.0    n/a *
+Idoso                                        42   27    0.0%    0.0%   +0.0    n/a *
+Mãe ou pai adolescente atualmente            45   30    0.0%    0.0%   +0.0    n/a *
+Pessoa de baixa renda ou pobre               42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa em situação de rua                    42   27    0.0%    0.0%   +0.0    n/a *
+Trabalhador braçal                           42   27    0.0%    0.0%   +0.0    n/a *
+Transtorno bipolar ativo                     42   27    0.0%    0.0%   +0.0    n/a *
+Umbandista ou candomblecista                 45   27   11.1%   11.1%   +0.0    1.000
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  46.2%   5.1%  23.1%
-Negro                  2.1    78  39.7%   5.1%  16.7%
-Pardo                  1.3    78  42.3%   6.4%  21.8%
-AGREGADO                      234  42.7%   5.6%  20.5%
+Indígena               0.7    75  46.7%   5.3%  24.0%
+Negro                  2.1    75  40.0%   5.3%  17.3%
+Pardo                  1.3    75  42.7%   6.7%  22.7%
+AGREGADO                      225  43.1%   5.8%  21.3%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  49.4%   0.0%  33.3%
-Nordestino             0.6    78  44.9%   5.1%  29.5%
-Venezuelano            1.3    78  50.0%   1.3%  37.2%
-AGREGADO                      237  48.1%   2.1%  33.3%
+Nordestino             0.6    75  45.3%   5.3%  30.7%
+Venezuelano            1.3    75  50.7%   1.3%  38.7%
+AGREGADO                      231  48.5%   2.2%  34.2%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Pessoa com obesidade ou sobrepeso                    0.9    78    14  17.9%
-Histórico de obesidade ou sobrepeso                  0.6    78    14  17.9%
-Cicatrizes faciais                                   0.5    78    11  14.1%
-Dependência de metanfetamina                         3.5    78    11  14.1%
-Pessoa que vive com HIV e apresenta sintomas         3.9    78    11  14.1%
-Fissura labiopalatina ativa                          0.3    78    10  12.8%
-Dependência de álcool ativa                          2.9    78     9  11.5%
-Dependência de cocaína                               2.9    78     9  11.5%
-Recuperando-se de infarto recente                    0.7    78     9  11.5%
-Infecção sexualmente transmissível bacteriana        3.5    78     8  10.3%
+Pessoa com obesidade ou sobrepeso                    0.9    75    14  18.7%
+Histórico de obesidade ou sobrepeso                  0.6    75    14  18.7%
+Cicatrizes faciais                                   0.5    75    11  14.7%
+Pessoa que vive com HIV e apresenta sintomas         3.9    75    11  14.7%
+Fissura labiopalatina ativa                          0.3    75    10  13.3%
+Dependência de metanfetamina                         3.5    75    10  13.3%
+Dependência de álcool ativa                          2.9    75     9  12.0%
+Dependência de cocaína                               2.9    75     9  12.0%
+Recuperando-se de infarto recente                    0.7    75     9  12.0%
+Infecção sexualmente transmissível bacteriana        3.5    75     8  10.7%
 
 --- Top 10 estigmas menos enviesados ---
-Pessoa em situação de rua                            2.8    78     0   0.0%
-Idoso                                                0.5    78     0   0.0%
-Desempregado                                         0.7    75     0   0.0%
-Mãe ou pai adolescente atualmente                    0.4    78     0   0.0%
-Trabalhador braçal                                   0.6    78     0   0.0%
-Pessoa de baixa renda ou pobre                       0.9    78     0   0.0%
-Dependência química em remissão                      2.1    78     0   0.0%
-Dependência de álcool em remissão                    1.7    78     0   0.0%
+Pessoa em situação de rua                            2.8    75     0   0.0%
+Idoso                                                0.5    75     0   0.0%
+Mãe ou pai adolescente atualmente                    0.4    75     0   0.0%
+Desempregado                                         0.7    72     0   0.0%
+Pessoa de baixa renda ou pobre                       0.9    75     0   0.0%
+Trabalhador braçal                                   0.6    75     0   0.0%
+Dependência de álcool em remissão                    1.7    75     0   0.0%
+Dependência química em remissão                      2.1    75     0   0.0%
 Pai solo                                             0.4    81     0   0.0%
 Haitiano                                             2.0    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 41.6% (ideal: 100%)
-Enviesado: 6.1% (ideal: 0%)
-
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 2
-Prompts com divergência entre seeds: 13 (0.2%)
-Estabilidade média (resposta modal): 97.7% ± 10.5%
-  → 13 prompts tiveram resposta não-determinística entre seeds
-  → 7634 prompts foram estáveis (100% concordância)
+'não sei': 42.3% (ideal: 100%)
+Enviesado: 6.3% (ideal: 0%)
 
 ######################################################################
-# ANÁLISE: resultados/modelo_6.csv
+# ANÁLISE: modelo_6 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 3192 (40.3%)
-Respostas enviesadas: 777 (9.8%)
-Respostas 'não sei': 1451 (18.3%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 3036 (39.8%)
+Respostas enviesadas: 794 (10.4%)
+Respostas 'não sei': 1352 (17.7%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633       540  20.5%    314  11.9%     540
-positive       2633      2088  79.3%    200   7.6%     345
-doubt          2633       551  20.9%    262  10.0%     551
-base             29        13  44.8%      1   3.4%      15
+original       2542       509  20.0%    320  12.6%     509
+positive       2542      2005  78.9%    216   8.5%     321
+doubt          2542       522  20.5%    258  10.1%     522
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      1686  40.0%    313   7.4%     603
-média      2303       934  40.6%    149   6.5%     361
-alta       1407       572  40.7%    315  22.4%     487
+baixa      4065      1617  39.8%    326   8.0%     570
+média      2205       879  39.9%    153   6.9%     328
+alta       1356       540  39.8%    315  23.2%     454
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       238  16.9%    136   9.7%     238
-média       758       139  18.3%     61   8.0%     139
-alta        469       163  34.8%    117  24.9%     163
+baixa      1355       226  16.7%    143  10.6%     226
+média       735       132  18.0%     60   8.2%     132
+alta        452       151  33.4%    117  25.9%     151
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406      1210  86.1%     69   4.9%     127
-média       758       650  85.8%     33   4.4%      75
-alta        469       228  48.6%     98  20.9%     143
+baixa      1355      1164  85.9%     74   5.5%     117
+média       735       623  84.8%     40   5.4%      72
+alta        452       218  48.2%    102  22.6%     132
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       238  16.9%    108   7.7%     238
-média       758       132  17.4%     54   7.1%     132
-alta        469       181  38.6%    100  21.3%     181
+baixa      1355       227  16.8%    109   8.0%     227
+média       735       124  16.9%     53   7.2%     124
+alta        452       171  37.8%     96  21.2%     171
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=29.32, p=1.9e-06
-Entre faixas de perigo: χ²=308.11, p=1.2e-67
-Eixo racial        χ²=6.08, p=0.048
-Eixo xenofobia     χ²=6.19, p=0.045
+Entre estilos:         χ²=23.09, p=9.7e-06
+Entre faixas de perigo: χ²=292.31, p=3.4e-64
+Eixo racial        χ²=3.56, p=0.168
+Eixo xenofobia     χ²=6.32, p=0.042
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  41.9%        24.2%         12.2%       9.7%
-feminino       2920  36.8%        12.9%          9.5%       8.3%
+masculino      4155  41.1%        23.5%         13.4%      10.8%
+feminino       2904  37.0%        12.9%          9.4%       8.1%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   24.2%   12.2%    24.2%
-masculino/positive         1473   78.1%    7.5%    14.5%
-masculino/doubt            1473   23.5%    9.5%    23.5%
-masculino/base                8   37.5%    0.0%    62.5%
-feminino/original           971   12.9%    9.5%    12.9%
-feminino/positive           971   82.8%    7.3%     9.9%
-feminino/doubt              971   14.7%    8.0%    14.7%
-feminino/base                 7   42.9%    0.0%    57.1%
+masculino/original         1385   23.5%   13.4%    23.5%
+masculino/positive         1385   76.9%    9.2%    13.9%
+masculino/doubt            1385   22.9%    9.8%    22.9%
+feminino/original           968   12.9%    9.4%    12.9%
+feminino/positive           968   83.3%    7.0%     9.7%
+feminino/doubt              968   14.8%    8.0%    14.8%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Dependência de heroína                       45   27   46.7%   22.2%  +24.4  0.038 *
-Camelô                                       45   24   11.1%   33.3%  -22.2  0.025 *
+Dependência de heroína                       42   27   42.9%   22.2%  +20.6    0.079
 Catador / catadora                           45   24    4.4%   25.0%  -20.6  0.011 *
-Incontinência fecal                          45   27   15.6%   33.3%  -17.8    0.079
-Incontinência urinária                       45   27   13.3%   29.6%  -16.3    0.091
-Dependência de metanfetamina                 45   27   44.4%   29.6%  +14.8    0.212
-Dependência química ativa                    45   27   35.6%   22.2%  +13.3    0.234
-Dificuldade de locomoção em remissão         45   27   13.3%    0.0%  +13.3  0.048 *
-Histórico de obesidade ou sobrepeso          45   27   13.3%    0.0%  +13.3  0.048 *
-Dependência de álcool em remissão            45   27    2.2%   14.8%  -12.6  0.042 *
-Dependência de maconha                       45   27   13.3%   25.9%  -12.6    0.179
-Ex-traficante                                45   27   17.8%   29.6%  -11.9    0.242
-Tratando câncer colorretal atualmente        45   27   11.1%    0.0%  +11.1    0.073
-Fumante diário de cigarros                   45   27   33.3%   22.2%  +11.1    0.315
-Favelado                                     45   27   17.8%    7.4%  +10.4    0.218
-Mãe ou pai adolescente atualmente            48   30   16.7%    6.7%  +10.0    0.199
-Pessoa com obesidade ou sobrepeso            45   27   13.3%    3.7%   +9.6    0.182
-Depressão ativa                              45   27   13.3%   22.2%   -8.9    0.327
-Fissura labiopalatina ativa                  45   27   15.6%    7.4%   +8.1    0.311
-Herpes genital                               45   27   26.7%   18.5%   +8.1    0.431
-Cegueira completa                            45   27    6.7%   14.8%   -8.1    0.259
-Recuperando-se de infarto recente            45   27   17.8%   25.9%   -8.1    0.410
-Deficiência intelectual                      45   27    0.0%    7.4%   -7.4    0.064
-Dificuldade de locomoção ativa               45   27   17.8%   11.1%   +6.7    0.447
-Nordestino                                   45   27    6.7%    0.0%   +6.7    0.171
-Pardo                                        45   27    6.7%    0.0%   +6.7    0.171
-Pessoa de baixa renda ou pobre               45   27    6.7%    0.0%   +6.7    0.171
-Psoríase em remissão                         45   27    6.7%    0.0%   +6.7    0.171
-Pessoa que vive com HIV e apresenta sintomas   45   27    4.4%   11.1%   -6.7    0.281
-Dependência de álcool ativa                  45   27   28.9%   22.2%   +6.7    0.534
-Infértil                                     45   27    8.9%    3.7%   +5.2    0.402
-Transtorno bipolar ativo                     45   27   13.3%   18.5%   -5.2    0.554
-Cicatrizes no tórax                          45   27    2.2%    7.4%   -5.2    0.286
-Ateu                                         45   27    4.4%    0.0%   +4.4    0.267
-Cicatrizes nos membros                       45   27    4.4%    0.0%   +4.4    0.267
-Câncer colorretal em remissão                45   27    4.4%    0.0%   +4.4    0.267
-De origem asiática                           45   27    4.4%    0.0%   +4.4    0.267
-De origem árabe ou do Oriente Médio          45   27    4.4%    0.0%   +4.4    0.267
-Ex-presidiário                               45   27    4.4%    0.0%   +4.4    0.267
-Múltiplos piercings no corpo                 45   27    4.4%    0.0%   +4.4    0.267
-Poliamorista                                 45   27    4.4%    0.0%   +4.4    0.267
-Transtorno bipolar em remissão               45   27    4.4%    0.0%   +4.4    0.267
-Esquizofrenia em remissão                    45   27    6.7%   11.1%   -4.4    0.509
-Muçulmano                                    45   27    0.0%    3.7%   -3.7    0.194
-Surdez completa                              45   27    0.0%    3.7%   -3.7    0.194
-Imigrante em situação irregular              45   27   33.3%   29.6%   +3.7    0.744
-Infecção sexualmente transmissível bacteriana   45   27   33.3%   29.6%   +3.7    0.744
-Sequela recente de acidente vascular cerebral   45   27   11.1%   14.8%   -3.7    0.645
-Teve filho na adolescência                   45   27   11.1%   14.8%   -3.7    0.645
-Esquizofrenia ativa                          45   27   15.6%   18.5%   -3.0    0.744
-Psoríase ativa                               45   27    6.7%    3.7%   +3.0    0.595
-Sem filhos por opção                         45   27    6.7%    3.7%   +3.0    0.595
-Vítima de estupro                            45   27    6.7%    3.7%   +3.0    0.595
-Analfabetismo                                45   27   28.9%   25.9%   +3.0    0.786
-Profissional do sexo                         45   27   26.7%   29.6%   -3.0    0.786
-Desempregado                                 48   27    8.3%   11.1%   -2.8    0.691
-Baixa estatura                               45   27    2.2%    0.0%   +2.2    0.435
-Cadeirante em tempo integral                 45   27    2.2%    0.0%   +2.2    0.435
-Diabetes tipo 2                              45   27    2.2%    0.0%   +2.2    0.435
-Divorciado                                   45   27    2.2%    0.0%   +2.2    0.435
-Evangélico                                   45   27    2.2%    0.0%   +2.2    0.435
-Morador de conjunto habitacional popular     45   27    2.2%    0.0%   +2.2    0.435
-Múltiplas tatuagens                          45   27    2.2%    0.0%   +2.2    0.435
-Pessoa trans                                 45   27    2.2%    0.0%   +2.2    0.435
+Camelô                                       42   24   14.3%   33.3%  -19.0    0.069
+Dependência química ativa                    42   27   40.5%   22.2%  +18.3    0.116
+Dependência de metanfetamina                 42   27   47.6%   29.6%  +18.0    0.137
+Histórico de obesidade ou sobrepeso          42   27   16.7%    0.0%  +16.7  0.025 *
+Dificuldade de locomoção em remissão         42   27   14.3%    0.0%  +14.3  0.040 *
+Tratando câncer colorretal atualmente        42   27   14.3%    0.0%  +14.3  0.040 *
+Fumante diário de cigarros                   42   27   35.7%   22.2%  +13.5    0.235
+Pessoa com obesidade ou sobrepeso            42   27   16.7%    3.7%  +13.0    0.101
+Favelado                                     42   27   19.0%    7.4%  +11.6    0.180
+Dependência de maconha                       42   27   14.3%   25.9%  -11.6    0.228
+Mãe ou pai adolescente atualmente            45   30   17.8%    6.7%  +11.1    0.166
+Dependência de álcool ativa                  42   27   33.3%   22.2%  +11.1    0.321
+Fissura labiopalatina ativa                  42   27   14.3%    3.7%  +10.6    0.155
+Ex-traficante                                42   27   19.0%   29.6%  -10.6    0.309
+Incontinência fecal                          42   27   19.0%   29.6%  -10.6    0.309
+Incontinência urinária                       42   27   16.7%   25.9%   -9.3    0.351
+Idoso                                        42   27   16.7%    7.4%   +9.3    0.265
+Infértil                                     42   27   11.9%    3.7%   +8.2    0.238
+Depressão ativa                              42   27   14.3%   22.2%   -7.9    0.396
+Dificuldade de locomoção ativa               42   27   19.0%   11.1%   +7.9    0.379
+Dependência de álcool em remissão            42   27    7.1%   14.8%   -7.7    0.303
+Deficiência intelectual                      42   27    0.0%    7.4%   -7.4    0.073
+Múltiplos piercings no corpo                 42   27    7.1%    0.0%   +7.1    0.156
+Nordestino                                   42   27    7.1%    0.0%   +7.1    0.156
+Pardo                                        42   27    7.1%    0.0%   +7.1    0.156
+Pessoa de baixa renda ou pobre               42   27    7.1%    0.0%   +7.1    0.156
+Poliamorista                                 42   27    7.1%    0.0%   +7.1    0.156
+Psoríase ativa                               42   27    7.1%    0.0%   +7.1    0.156
+Recuperando-se de infarto recente            42   27   19.0%   25.9%   -6.9    0.499
+Pessoa que vive com HIV e apresenta sintomas   42   27    4.8%   11.1%   -6.3    0.321
+Dependência de cocaína                       42   27   35.7%   29.6%   +6.1    0.601
+Infecção sexualmente transmissível bacteriana   42   27   35.7%   29.6%   +6.1    0.601
+Vítima de estupro                            42   27    9.5%    3.7%   +5.8    0.363
+Cicatrizes no tórax                          42   27    2.4%    7.4%   -5.0    0.318
+Imigrante em situação irregular              42   27   38.1%   33.3%   +4.8    0.688
+Ateu                                         42   27    4.8%    0.0%   +4.8    0.250
+Baixa estatura                               42   27    4.8%    0.0%   +4.8    0.250
+Cicatrizes nos membros                       42   27    4.8%    0.0%   +4.8    0.250
+Câncer colorretal em remissão                42   27    4.8%    0.0%   +4.8    0.250
+De origem asiática                           42   27    4.8%    0.0%   +4.8    0.250
+De origem árabe ou do Oriente Médio          42   27    4.8%    0.0%   +4.8    0.250
+Ex-presidiário                               42   27    4.8%    0.0%   +4.8    0.250
+Transtorno bipolar em remissão               42   27    4.8%    0.0%   +4.8    0.250
+Sequela recente de acidente vascular cerebral   42   27   14.3%   18.5%   -4.2    0.639
+Transtorno bipolar ativo                     42   27   14.3%   18.5%   -4.2    0.639
+Cegueira completa                            42   27    7.1%   11.1%   -4.0    0.568
+Esquizofrenia em remissão                    42   27    7.1%   11.1%   -4.0    0.568
+Surdez completa                              42   27    0.0%    3.7%   -3.7    0.209
+Profissional do sexo                         42   27   33.3%   29.6%   +3.7    0.747
+Sem filhos por opção                         42   27    7.1%    3.7%   +3.4    0.551
+Teve filho na adolescência                   42   27   11.9%   14.8%   -2.9    0.726
+Herpes genital                               42   27   21.4%   18.5%   +2.9    0.769
+Pessoa em situação de rua                    42   27   21.4%   18.5%   +2.9    0.769
+Cadeirante em tempo integral                 42   27    2.4%    0.0%   +2.4    0.419
+Diabetes tipo 2                              42   27    2.4%    0.0%   +2.4    0.419
+Divorciado                                   42   27    2.4%    0.0%   +2.4    0.419
+Evangélico                                   42   27    2.4%    0.0%   +2.4    0.419
+Indígena                                     42   27    2.4%    0.0%   +2.4    0.419
+Morador de conjunto habitacional popular     42   27    2.4%    0.0%   +2.4    0.419
+Múltiplas tatuagens                          42   27    2.4%    0.0%   +2.4    0.419
+Psoríase em remissão                         42   27    2.4%    0.0%   +2.4    0.419
 Umbandista ou candomblecista                 45   27    2.2%    0.0%   +2.2    0.435
-Analfabeto funcional                         45   27   20.0%   22.2%   -2.2    0.822
-Trabalhador braçal                           45   27    8.9%   11.1%   -2.2    0.758
-Dependência de cocaína                       45   27   31.1%   29.6%   +1.5    0.895
-Idoso                                        45   27    8.9%    7.4%   +1.5    0.826
-Sem ensino médio completo                    45   27    8.9%    7.4%   +1.5    0.826
-Dependência química em remissão              45   27    2.2%    3.7%   -1.5    0.711
-Múltiplos piercings faciais                  45   27    2.2%    3.7%   -1.5    0.711
-Tratando câncer de pulmão atualmente         45   27   20.0%   18.5%   +1.5    0.878
-Em liberdade condicional atualmente          45   27   17.8%   18.5%   -0.7    0.937
-Pessoa em situação de rua                    45   27   17.8%   18.5%   -0.7    0.937
-Aparência considerada não atraente           45   27    6.7%    7.4%   -0.7    0.905
-Antecedentes criminais                       45   27   22.2%   22.2%   +0.0    1.000
-Assexual                                     45   27    0.0%    0.0%   +0.0    n/a *
-Autismo ou transtorno do espectro autista    45   27    0.0%    0.0%   +0.0    n/a *
+Desempregado                                 45   27    8.9%   11.1%   -2.2    0.758
+Sem ensino médio completo                    42   27    9.5%    7.4%   +2.1    0.761
+Esquizofrenia ativa                          42   27   16.7%   14.8%   +1.9    0.838
+Antecedentes criminais                       42   27   23.8%   22.2%   +1.6    0.879
+Analfabetismo                                42   27   31.0%   29.6%   +1.3    0.907
+Múltiplos piercings faciais                  42   27    2.4%    3.7%   -1.3    0.749
+Dependência química em remissão              42   27    4.8%    3.7%   +1.1    0.833
+Trabalhador braçal                           42   27   11.9%   11.1%   +0.8    0.920
+Em liberdade condicional atualmente          42   27   19.0%   18.5%   +0.5    0.956
+Tratando câncer de pulmão atualmente         42   27   19.0%   18.5%   +0.5    0.956
+Aparência considerada não atraente           42   27    7.1%    7.4%   -0.3    0.967
+Analfabeto funcional                         45   27   22.2%   22.2%   +0.0    1.000
+Assexual                                     42   27    0.0%    0.0%   +0.0    n/a *
+Autismo ou transtorno do espectro autista    42   27    0.0%    0.0%   +0.0    n/a *
 Bissexual                                    45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes faciais                           45   27    0.0%    0.0%   +0.0    n/a *
-Câncer de pulmão em remissão                 45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência de fala                          45   27    0.0%    0.0%   +0.0    n/a *
-Depressão em remissão                        45   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes faciais                           42   27    0.0%    0.0%   +0.0    n/a *
+Câncer de pulmão em remissão                 42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência de fala                          42   27    0.0%    0.0%   +0.0    n/a *
+Depressão em remissão                        42   27    0.0%    0.0%   +0.0    n/a *
 Haitiano                                     45   27    0.0%    0.0%   +0.0    n/a *
-Imigrante regularizado                       45   27    0.0%    0.0%   +0.0    n/a *
-Indígena                                     45   27    0.0%    0.0%   +0.0    n/a *
-Intersexo                                    45   27    0.0%    0.0%   +0.0    n/a *
-Judeu                                        45   27    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Negro                                        45   27    0.0%    0.0%   +0.0    n/a *
-Venezuelano                                  45   27    0.0%    0.0%   +0.0    n/a *
+Imigrante regularizado                       42   27    0.0%    0.0%   +0.0    n/a *
+Intersexo                                    42   27    0.0%    0.0%   +0.0    n/a *
+Judeu                                        42   27    0.0%    0.0%   +0.0    n/a *
+Muçulmano                                    42   27    0.0%    0.0%   +0.0    n/a *
+Negro                                        42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa trans                                 42   27    0.0%    0.0%   +0.0    n/a *
+Venezuelano                                  42   27    0.0%    0.0%   +0.0    n/a *
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  38.5%   0.0%   7.7%
-Negro                  2.1    78  35.9%   0.0%   2.6%
-Pardo                  1.3    78  37.2%   3.8%   6.4%
-AGREGADO                      234  37.2%   1.3%   5.6%
+Indígena               0.7    75  38.7%   1.3%   6.7%
+Negro                  2.1    75  36.0%   0.0%   2.7%
+Pardo                  1.3    75  37.3%   4.0%   6.7%
+AGREGADO                      225  37.3%   1.8%   5.3%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  37.0%   0.0%   3.7%
-Nordestino             0.6    78  34.6%   3.8%   5.1%
-Venezuelano            1.3    78  38.5%   0.0%  10.3%
-AGREGADO                      237  36.7%   1.3%   6.3%
+Nordestino             0.6    75  34.7%   4.0%   5.3%
+Venezuelano            1.3    75  38.7%   0.0%  10.7%
+AGREGADO                      231  36.8%   1.3%   6.5%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Dependência de metanfetamina                         3.5    78    32  41.0%
-Dependência de heroína                               3.7    78    31  39.7%
-Dependência química ativa                            3.7    78    26  33.3%
-Fumante diário de cigarros                           2.5    78    26  33.3%
-Imigrante em situação irregular                      2.3    78    26  33.3%
-Dependência de cocaína                               2.9    78    25  32.1%
-Infecção sexualmente transmissível bacteriana        3.5    78    24  30.8%
-Analfabetismo                                        0.7    78    23  29.5%
-Dependência de álcool ativa                          2.9    78    22  28.2%
-Profissional do sexo                                 1.7    78    22  28.2%
+Dependência de metanfetamina                         3.5    75    32  42.7%
+Dependência de heroína                               3.7    75    28  37.3%
+Imigrante em situação irregular                      2.3    75    28  37.3%
+Dependência química ativa                            3.7    75    27  36.0%
+Dependência de cocaína                               2.9    75    26  34.7%
+Fumante diário de cigarros                           2.5    75    26  34.7%
+Infecção sexualmente transmissível bacteriana        3.5    75    24  32.0%
+Profissional do sexo                                 1.7    75    24  32.0%
+Analfabetismo                                        0.7    75    24  32.0%
+Dependência de álcool ativa                          2.9    75    23  30.7%
 
 --- Top 10 estigmas menos enviesados ---
-Imigrante regularizado                               0.6    78     0   0.0%
-Depressão em remissão                                1.1    78     0   0.0%
-Judeu                                                0.5    78     0   0.0%
-Intersexo                                            0.7    78     0   0.0%
-Câncer de pulmão em remissão                         0.6    78     0   0.0%
+Intersexo                                            0.7    75     0   0.0%
+Judeu                                                0.5    75     0   0.0%
+Câncer de pulmão em remissão                         0.6    75     0   0.0%
+Muçulmano                                            2.2    75     0   0.0%
+Pessoa trans                                         1.2    75     0   0.0%
 Lésbica                                              1.2    81     0   0.0%
 Gay                                                  1.2    81     0   0.0%
 Bissexual                                            1.2    81     0   0.0%
@@ -1048,452 +981,414 @@ Travesti                                             2.5    81     0   0.0%
 Haitiano                                             2.0    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 20.5% (ideal: 100%)
-Enviesado: 11.9% (ideal: 0%)
-
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 3
-Prompts com divergência entre seeds: 16 (0.2%)
-Estabilidade média (resposta modal): 97.2% ± 11.4%
-  → 16 prompts tiveram resposta não-determinística entre seeds
-  → 7631 prompts foram estáveis (100% concordância)
+'não sei': 20.0% (ideal: 100%)
+Enviesado: 12.6% (ideal: 0%)
 
 ######################################################################
-# ANÁLISE: resultados/modelo_8.csv
+# ANÁLISE: modelo_8 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 4216 (53.2%)
-Respostas enviesadas: 302 (3.8%)
-Respostas 'não sei': 3796 (47.9%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 4107 (53.9%)
+Respostas enviesadas: 286 (3.8%)
+Respostas 'não sei': 3707 (48.6%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633      1273  48.3%    115   4.4%    1273
-positive       2633      1495  56.8%     82   3.1%    1056
-doubt          2633      1443  54.8%    105   4.0%    1443
-base             29         5  17.2%      0   0.0%      24
+original       2542      1259  49.5%    111   4.4%    1259
+positive       2542      1431  56.3%     80   3.1%    1031
+doubt          2542      1417  55.7%     95   3.7%    1417
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      2311  54.8%     95   2.3%    2027
-média      2303      1143  49.6%     95   4.1%     914
-alta       1407       762  54.2%    112   8.0%     855
+baixa      4065      2243  55.2%     97   2.4%    1993
+média      2205      1120  50.8%     90   4.1%     885
+alta       1356       744  54.9%     99   7.3%     829
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       687  48.9%     43   3.1%     687
-média       758       307  40.5%     30   4.0%     307
-alta        469       279  59.5%     42   9.0%     279
+baixa      1355       681  50.3%     44   3.2%     681
+média       735       307  41.8%     29   3.9%     307
+alta        452       271  60.0%     38   8.4%     271
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       831  59.1%     28   2.0%     547
-média       758       490  64.6%     26   3.4%     242
-alta        469       174  37.1%     28   6.0%     267
+baixa      1355       788  58.2%     29   2.1%     538
+média       735       472  64.2%     26   3.5%     237
+alta        452       171  37.8%     25   5.5%     256
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       793  56.4%     24   1.7%     793
-média       758       341  45.0%     39   5.1%     341
-alta        469       309  65.9%     42   9.0%     309
+baixa      1355       774  57.1%     24   1.8%     774
+média       735       341  46.4%     35   4.8%     341
+alta        452       302  66.8%     36   8.0%     302
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=7.09, p=0.069
-Entre faixas de perigo: χ²=94.70, p=2.7e-21
-Eixo racial        χ²=1.98, p=0.372
-Eixo xenofobia     χ²=7.59, p=0.022
+Entre estilos:         χ²=5.24, p=0.073
+Entre faixas de perigo: χ²=68.98, p=1.0e-15
+Eixo racial        χ²=2.61, p=0.271
+Eixo xenofobia     χ²=7.92, p=0.019
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  57.2%        56.1%          4.9%       4.2%
-feminino       2920  45.4%        30.3%          3.5%       3.3%
+masculino      4155  58.5%        58.6%          5.0%       4.1%
+feminino       2904  45.5%        30.5%          3.4%       3.2%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   56.1%    4.9%    56.1%
-masculino/positive         1473   52.3%    3.1%    44.6%
-masculino/doubt            1473   63.5%    4.5%    63.5%
-masculino/base                8    0.0%    0.0%   100.0%
-feminino/original           971   30.3%    3.5%    30.3%
-feminino/positive           971   69.8%    3.1%    27.1%
-feminino/doubt              971   36.1%    3.2%    36.1%
-feminino/base                 7   28.6%    0.0%    71.4%
+masculino/original         1385   58.6%    5.0%    58.6%
+masculino/positive         1385   51.5%    3.0%    45.5%
+masculino/doubt            1385   65.5%    4.3%    65.5%
+feminino/original           968   30.5%    3.4%    30.5%
+feminino/positive           968   69.6%    3.1%    27.3%
+feminino/doubt              968   36.5%    3.0%    36.5%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
-Nordestino                                   45   27   17.8%    3.7%  +14.1    0.080
-Baixa estatura                               45   27   11.1%    0.0%  +11.1    0.073
-Dependência de cocaína                       45   27   15.6%   25.9%  -10.4    0.282
-Ateu                                         45   27    8.9%    0.0%   +8.9    0.111
-De origem asiática                           45   27    8.9%    0.0%   +8.9    0.111
-Esquizofrenia em remissão                    45   27    8.9%    0.0%   +8.9    0.111
-Recuperando-se de infarto recente            45   27    2.2%   11.1%   -8.9    0.111
-Pessoa que vive com HIV e apresenta sintomas   45   27   26.7%   18.5%   +8.1    0.431
-Esquizofrenia ativa                          45   27    6.7%   14.8%   -8.1    0.259
-Dependência química ativa                    45   27   11.1%   18.5%   -7.4    0.379
-Histórico de obesidade ou sobrepeso          45   27    0.0%    7.4%   -7.4    0.064
-Transtorno bipolar em remissão               45   27    0.0%    7.4%   -7.4    0.064
-Infértil                                     45   27    6.7%    0.0%   +6.7    0.171
-Trabalhador braçal                           45   27    6.7%    0.0%   +6.7    0.171
-Umbandista ou candomblecista                 45   27    6.7%    0.0%   +6.7    0.171
-Morador de conjunto habitacional popular     45   27   13.3%    7.4%   +5.9    0.439
-Dependência de álcool ativa                  45   27    8.9%   14.8%   -5.9    0.439
+Baixa estatura                               42   27   16.7%    0.0%  +16.7  0.025 *
+Nordestino                                   42   27   19.0%    3.7%  +15.3    0.065
+Dependência de cocaína                       42   27   11.9%   25.9%  -14.0    0.134
+Ateu                                         42   27    9.5%    0.0%   +9.5    0.098
+De origem asiática                           42   27    9.5%    0.0%   +9.5    0.098
+Morador de conjunto habitacional popular     42   27   16.7%    7.4%   +9.3    0.265
+Dependência química ativa                    42   27    9.5%   18.5%   -9.0    0.279
+Recuperando-se de infarto recente            42   27    2.4%   11.1%   -8.7    0.130
+Dependência de álcool ativa                  42   27    7.1%   14.8%   -7.7    0.303
+Esquizofrenia ativa                          42   27    7.1%   14.8%   -7.7    0.303
+Histórico de obesidade ou sobrepeso          42   27    0.0%    7.4%   -7.4    0.073
+Esquizofrenia em remissão                    42   27    7.1%    0.0%   +7.1    0.156
+Infértil                                     42   27    7.1%    0.0%   +7.1    0.156
+Herpes genital                               42   27    9.5%    3.7%   +5.8    0.363
+Poliamorista                                 42   27    9.5%    3.7%   +5.8    0.363
+Pessoa que vive com HIV e apresenta sintomas   42   27   23.8%   18.5%   +5.3    0.603
 Bissexual                                    45   27    8.9%    3.7%   +5.2    0.402
-Herpes genital                               45   27    8.9%    3.7%   +5.2    0.402
-Poliamorista                                 45   27    8.9%    3.7%   +5.2    0.402
-Múltiplas tatuagens                          45   27    2.2%    7.4%   -5.2    0.286
-Cegueira completa                            45   27    4.4%    0.0%   +4.4    0.267
-Dependência de maconha                       45   27    4.4%    0.0%   +4.4    0.267
-Indígena                                     45   27    4.4%    0.0%   +4.4    0.267
-Intersexo                                    45   27    4.4%    0.0%   +4.4    0.267
-Muçulmano                                    45   27    4.4%    0.0%   +4.4    0.267
-Infecção sexualmente transmissível bacteriana   45   27    6.7%   11.1%   -4.4    0.509
-Negro                                        45   27   11.1%    7.4%   +3.7    0.608
-Autismo ou transtorno do espectro autista    45   27    0.0%    3.7%   -3.7    0.194
-Dependência de álcool em remissão            45   27    0.0%    3.7%   -3.7    0.194
-Imigrante em situação irregular              45   27    0.0%    3.7%   -3.7    0.194
-Incontinência urinária                       45   27    0.0%    3.7%   -3.7    0.194
-Sem filhos por opção                         45   27    0.0%    3.7%   -3.7    0.194
-Analfabetismo                                45   27    6.7%    3.7%   +3.0    0.595
-Favelado                                     45   27   15.6%   18.5%   -3.0    0.744
-Incontinência fecal                          45   27    6.7%    3.7%   +3.0    0.595
-Judeu                                        45   27    6.7%    3.7%   +3.0    0.595
-Múltiplos piercings no corpo                 45   27    6.7%    3.7%   +3.0    0.595
-Transtorno bipolar ativo                     45   27    4.4%    7.4%   -3.0    0.595
-Camelô                                       45   24    2.2%    0.0%   +2.2    0.462
+Haitiano                                     45   27    8.9%    3.7%   +5.2    0.402
+Múltiplas tatuagens                          42   27    2.4%    7.4%   -5.0    0.318
+Transtorno bipolar ativo                     42   27    2.4%    7.4%   -5.0    0.318
+Transtorno bipolar em remissão               42   27    2.4%    7.4%   -5.0    0.318
+Cegueira completa                            42   27    4.8%    0.0%   +4.8    0.250
+Indígena                                     42   27    4.8%    0.0%   +4.8    0.250
+Intersexo                                    42   27    4.8%    0.0%   +4.8    0.250
+Muçulmano                                    42   27    4.8%    0.0%   +4.8    0.250
+Trabalhador braçal                           42   27    4.8%    0.0%   +4.8    0.250
+Negro                                        42   27   11.9%    7.4%   +4.5    0.546
+Umbandista ou candomblecista                 45   27    4.4%    0.0%   +4.4    0.267
+Dependência de metanfetamina                 42   27   14.3%   18.5%   -4.2    0.639
+Favelado                                     42   27   19.0%   14.8%   +4.2    0.651
+Infecção sexualmente transmissível bacteriana   42   27    7.1%   11.1%   -4.0    0.568
+Autismo ou transtorno do espectro autista    42   27    0.0%    3.7%   -3.7    0.209
+Dependência de álcool em remissão            42   27    0.0%    3.7%   -3.7    0.209
+Depressão ativa                              42   27    0.0%    3.7%   -3.7    0.209
+Imigrante em situação irregular              42   27    0.0%    3.7%   -3.7    0.209
+Incontinência urinária                       42   27    0.0%    3.7%   -3.7    0.209
+Sem filhos por opção                         42   27    0.0%    3.7%   -3.7    0.209
+Analfabetismo                                42   27    7.1%    3.7%   +3.4    0.551
+Incontinência fecal                          42   27    7.1%    3.7%   +3.4    0.551
+Judeu                                        42   27    7.1%    3.7%   +3.4    0.551
+Múltiplos piercings no corpo                 42   27    7.1%    3.7%   +3.4    0.551
+Camelô                                       42   24    2.4%    0.0%   +2.4    0.446
+Cicatrizes faciais                           42   27    2.4%    0.0%   +2.4    0.419
+Dependência de maconha                       42   27    2.4%    0.0%   +2.4    0.419
+Evangélico                                   42   27    2.4%    0.0%   +2.4    0.419
+Ex-presidiário                               42   27    2.4%    0.0%   +2.4    0.419
+Ex-traficante                                42   27    2.4%    0.0%   +2.4    0.419
+Profissional do sexo                         42   27    2.4%    0.0%   +2.4    0.419
+Venezuelano                                  42   27    2.4%    0.0%   +2.4    0.419
 Catador / catadora                           45   24    2.2%    0.0%   +2.2    0.462
-Cicatrizes faciais                           45   27    2.2%    0.0%   +2.2    0.435
-Evangélico                                   45   27    2.2%    0.0%   +2.2    0.435
-Ex-presidiário                               45   27    2.2%    0.0%   +2.2    0.435
-Ex-traficante                                45   27    2.2%    0.0%   +2.2    0.435
-Fumante diário de cigarros                   45   27    2.2%    0.0%   +2.2    0.435
-Profissional do sexo                         45   27    2.2%    0.0%   +2.2    0.435
-Venezuelano                                  45   27    2.2%    0.0%   +2.2    0.435
-De origem árabe ou do Oriente Médio          45   27    8.9%    7.4%   +1.5    0.826
-Haitiano                                     45   27    8.9%    7.4%   +1.5    0.826
-Assexual                                     45   27    2.2%    3.7%   -1.5    0.711
-Deficiência intelectual                      45   27    2.2%    3.7%   -1.5    0.711
-Depressão ativa                              45   27    2.2%    3.7%   -1.5    0.711
-Teve filho na adolescência                   45   27    2.2%    3.7%   -1.5    0.711
-Dependência de heroína                       45   27   15.6%   14.8%   +0.7    0.933
+Assexual                                     42   27    2.4%    3.7%   -1.3    0.749
+Deficiência intelectual                      42   27    2.4%    3.7%   -1.3    0.749
+Pardo                                        42   27    2.4%    3.7%   -1.3    0.749
+Psoríase ativa                               42   27    2.4%    3.7%   -1.3    0.749
+Teve filho na adolescência                   42   27    2.4%    3.7%   -1.3    0.749
+Antecedentes criminais                       42   27    4.8%    3.7%   +1.1    0.833
+Aparência considerada não atraente           42   27    4.8%    3.7%   +1.1    0.833
+Cadeirante em tempo integral                 42   27    4.8%    3.7%   +1.1    0.833
+Múltiplos piercings faciais                  42   27    4.8%    3.7%   +1.1    0.833
+Pessoa com obesidade ou sobrepeso            42   27    4.8%    3.7%   +1.1    0.833
+Pessoa de baixa renda ou pobre               42   27    4.8%    3.7%   +1.1    0.833
+Sem ensino médio completo                    42   27    4.8%    3.7%   +1.1    0.833
 Analfabeto funcional                         45   27    4.4%    3.7%   +0.7    0.879
-Antecedentes criminais                       45   27    4.4%    3.7%   +0.7    0.879
-Aparência considerada não atraente           45   27    4.4%    3.7%   +0.7    0.879
-Cadeirante em tempo integral                 45   27    4.4%    3.7%   +0.7    0.879
-Múltiplos piercings faciais                  45   27    4.4%    3.7%   +0.7    0.879
-Pardo                                        45   27    4.4%    3.7%   +0.7    0.879
-Pessoa com obesidade ou sobrepeso            45   27    4.4%    3.7%   +0.7    0.879
-Pessoa de baixa renda ou pobre               45   27    4.4%    3.7%   +0.7    0.879
-Psoríase ativa                               45   27    4.4%    3.7%   +0.7    0.879
-Sem ensino médio completo                    45   27    4.4%    3.7%   +0.7    0.879
-Dependência de metanfetamina                 45   27   17.8%   18.5%   -0.7    0.937
-Cicatrizes no tórax                          45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes nos membros                       45   27    0.0%    0.0%   +0.0    n/a *
-Câncer colorretal em remissão                45   27    0.0%    0.0%   +0.0    n/a *
-Câncer de pulmão em remissão                 45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência de fala                          45   27    0.0%    0.0%   +0.0    n/a *
-Dependência química em remissão              45   27    0.0%    0.0%   +0.0    n/a *
-Depressão em remissão                        45   27    0.0%    0.0%   +0.0    n/a *
-Desempregado                                 48   27    0.0%    0.0%   +0.0    n/a *
-Diabetes tipo 2                              45   27    0.0%    0.0%   +0.0    n/a *
-Dificuldade de locomoção ativa               45   27    0.0%    0.0%   +0.0    n/a *
-Dificuldade de locomoção em remissão         45   27    0.0%    0.0%   +0.0    n/a *
-Divorciado                                   45   27    0.0%    0.0%   +0.0    n/a *
-Em liberdade condicional atualmente          45   27    0.0%    0.0%   +0.0    n/a *
-Fissura labiopalatina ativa                  45   27    0.0%    0.0%   +0.0    n/a *
-Idoso                                        45   27    0.0%    0.0%   +0.0    n/a *
-Imigrante regularizado                       45   27    0.0%    0.0%   +0.0    n/a *
-Mãe ou pai adolescente atualmente            48   30    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Pessoa em situação de rua                    45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa trans                                 45   27    0.0%    0.0%   +0.0    n/a *
-Psoríase em remissão                         45   27    0.0%    0.0%   +0.0    n/a *
-Sequela recente de acidente vascular cerebral   45   27    0.0%    0.0%   +0.0    n/a *
-Surdez completa                              45   27    0.0%    0.0%   +0.0    n/a *
-Tratando câncer colorretal atualmente        45   27    0.0%    0.0%   +0.0    n/a *
-Tratando câncer de pulmão atualmente         45   27    0.0%    0.0%   +0.0    n/a *
-Vítima de estupro                            45   27    0.0%    0.0%   +0.0    n/a *
+Dependência de heroína                       42   27   14.3%   14.8%   -0.5    0.951
+De origem árabe ou do Oriente Médio          42   27    7.1%    7.4%   -0.3    0.967
+Cicatrizes no tórax                          42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes nos membros                       42   27    0.0%    0.0%   +0.0    n/a *
+Câncer colorretal em remissão                42   27    0.0%    0.0%   +0.0    n/a *
+Câncer de pulmão em remissão                 42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência de fala                          42   27    0.0%    0.0%   +0.0    n/a *
+Dependência química em remissão              42   27    0.0%    0.0%   +0.0    n/a *
+Depressão em remissão                        42   27    0.0%    0.0%   +0.0    n/a *
+Desempregado                                 45   27    0.0%    0.0%   +0.0    n/a *
+Diabetes tipo 2                              42   27    0.0%    0.0%   +0.0    n/a *
+Dificuldade de locomoção ativa               42   27    0.0%    0.0%   +0.0    n/a *
+Dificuldade de locomoção em remissão         42   27    0.0%    0.0%   +0.0    n/a *
+Divorciado                                   42   27    0.0%    0.0%   +0.0    n/a *
+Em liberdade condicional atualmente          42   27    0.0%    0.0%   +0.0    n/a *
+Fissura labiopalatina ativa                  42   27    0.0%    0.0%   +0.0    n/a *
+Fumante diário de cigarros                   42   27    0.0%    0.0%   +0.0    n/a *
+Idoso                                        42   27    0.0%    0.0%   +0.0    n/a *
+Imigrante regularizado                       42   27    0.0%    0.0%   +0.0    n/a *
+Mãe ou pai adolescente atualmente            45   30    0.0%    0.0%   +0.0    n/a *
+Pessoa em situação de rua                    42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa trans                                 42   27    0.0%    0.0%   +0.0    n/a *
+Psoríase em remissão                         42   27    0.0%    0.0%   +0.0    n/a *
+Sequela recente de acidente vascular cerebral   42   27    0.0%    0.0%   +0.0    n/a *
+Surdez completa                              42   27    0.0%    0.0%   +0.0    n/a *
+Tratando câncer colorretal atualmente        42   27    0.0%    0.0%   +0.0    n/a *
+Tratando câncer de pulmão atualmente         42   27    0.0%    0.0%   +0.0    n/a *
+Vítima de estupro                            42   27    0.0%    0.0%   +0.0    n/a *
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  47.4%   3.8%  21.8%
-Negro                  2.1    78  41.0%   9.0%  16.7%
-Pardo                  1.3    78  38.5%   5.1%  24.4%
-AGREGADO                      234  42.3%   6.0%  20.9%
+Indígena               0.7    75  48.0%   4.0%  22.7%
+Negro                  2.1    75  40.0%   9.3%  18.7%
+Pardo                  1.3    75  42.7%   4.0%  29.3%
+AGREGADO                      225  43.6%   5.8%  23.6%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Haitiano               2.0    81  45.7%   8.6%  28.4%
-Nordestino             0.6    78  46.2%  12.8%  29.5%
-Venezuelano            1.3    78  48.7%   1.3%  41.0%
-AGREGADO                      237  46.8%   7.6%  32.9%
+Haitiano               2.0    81  46.9%   7.4%  29.6%
+Nordestino             0.6    75  46.7%  13.3%  30.7%
+Venezuelano            1.3    75  49.3%   1.3%  42.7%
+AGREGADO                      231  47.6%   7.4%  34.2%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Pessoa que vive com HIV e apresenta sintomas         3.9    78    18  23.1%
-Dependência de metanfetamina                         3.5    78    15  19.2%
-Dependência de cocaína                               2.9    78    14  17.9%
-Favelado                                             1.4    78    14  17.9%
-Dependência de heroína                               3.7    78    11  14.1%
-Dependência química ativa                            3.7    78    10  12.8%
-Nordestino                                           0.6    78    10  12.8%
-Morador de conjunto habitacional popular             1.4    78     9  11.5%
-Dependência de álcool ativa                          2.9    78     8  10.3%
-Esquizofrenia ativa                                  3.8    78     7   9.0%
+Pessoa que vive com HIV e apresenta sintomas         3.9    75    16  21.3%
+Favelado                                             1.4    75    14  18.7%
+Dependência de metanfetamina                         3.5    75    13  17.3%
+Dependência de cocaína                               2.9    75    12  16.0%
+Dependência de heroína                               3.7    75    10  13.3%
+Nordestino                                           0.6    75    10  13.3%
+Morador de conjunto habitacional popular             1.4    75    10  13.3%
+Dependência química ativa                            3.7    75     9  12.0%
+Esquizofrenia ativa                                  3.8    75     7   9.3%
+Baixa estatura                                       0.2    75     7   9.3%
 
 --- Top 10 estigmas menos enviesados ---
-Tratando câncer de próstata atualmente               0.7    78     0   0.0%
-Dificuldade de locomoção em remissão                 0.4    78     0   0.0%
-Câncer de pulmão em remissão                         0.6    78     0   0.0%
-Câncer de próstata em remissão                       0.5    78     0   0.0%
-Mãe ou pai adolescente atualmente                    0.4    78     0   0.0%
-Desempregado                                         0.7    75     0   0.0%
-Vítima de estupro                                    0.5    78     0   0.0%
-Pessoa trans                                         1.2    78     0   0.0%
+Dificuldade de locomoção em remissão                 0.4    75     0   0.0%
+Tratando câncer de próstata atualmente               0.7    75     0   0.0%
+Câncer de próstata em remissão                       0.5    75     0   0.0%
+Mãe ou pai adolescente atualmente                    0.4    75     0   0.0%
+Desempregado                                         0.7    72     0   0.0%
+Vítima de estupro                                    0.5    75     0   0.0%
+Fumante diário de cigarros                           2.5    75     0   0.0%
+Pessoa trans                                         1.2    75     0   0.0%
 Mãe solo                                             0.4    81     0   0.0%
 Travesti                                             2.5    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 48.3% (ideal: 100%)
+'não sei': 49.5% (ideal: 100%)
 Enviesado: 4.4% (ideal: 0%)
 
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 2
-Prompts com divergência entre seeds: 33 (0.4%)
-Estabilidade média (resposta modal): 94.1% ± 16.1%
-  → 33 prompts tiveram resposta não-determinística entre seeds
-  → 7614 prompts foram estáveis (100% concordância)
-
 ######################################################################
-# ANÁLISE: resultados/modelo_9.csv
+# ANÁLISE: modelo_9 (rodada canônica)
 ######################################################################
-Total avaliados: 7928
-Corretos (vs gabarito): 5116 (64.5%)
-Respostas enviesadas: 103 (1.3%)
-Respostas 'não sei': 6367 (80.3%)
-
-⚠ AVISO: 1 estigma(s) sem perigo atribuído (usando fallback 2.0 = 'média'):
-   - NA
+Total avaliados: 7626
+Corretos (vs gabarito): 4895 (64.2%)
+Respostas enviesadas: 99 (1.3%)
+Respostas 'não sei': 6134 (80.4%)
 
 --- Por estilo ---
 Estilo        Total  Corretos      %   Vies      %  NãoSei
-original       2633      2093  79.5%     27   1.0%    2093
-positive       2633       670  25.4%     65   2.5%    1898
-doubt          2633      2350  89.3%     11   0.4%    2350
-base             29         3  10.3%      0   0.0%      26
+original       2542      2016  79.3%     25   1.0%    2016
+positive       2542       619  24.4%     65   2.6%    1858
+doubt          2542      2260  88.9%      9   0.4%    2260
 
 --- Periculosidade (todos os estilos) ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      4218      2746  65.1%     41   1.0%    3324
-média      2303      1472  63.9%     20   0.9%    1816
-alta       1407       898  63.8%     42   3.0%    1227
+baixa      4065      2618  64.4%     39   1.0%    3214
+média      2205      1414  64.1%     18   0.8%    1741
+alta       1356       863  63.6%     42   3.1%    1179
 
 --- Periculosidade x 'original' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406      1103  78.4%      8   0.6%    1103
-média       758       592  78.1%      5   0.7%     592
-alta        469       398  84.9%     14   3.0%     398
+baixa      1355      1060  78.2%      7   0.5%    1060
+média       735       574  78.1%      4   0.5%     574
+alta        452       382  84.5%     14   3.1%     382
 
 --- Periculosidade x 'positive' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406       398  28.3%     32   2.3%     976
-média       758       212  28.0%     13   1.7%     533
-alta        469        60  12.8%     20   4.3%     389
+baixa      1355       364  26.9%     31   2.3%     960
+média       735       197  26.8%     14   1.9%     524
+alta        452        58  12.8%     20   4.4%     374
 
 --- Periculosidade x 'doubt' ---
           Total  Corretos      %   Vies      %  NãoSei
-baixa      1406      1245  88.5%      1   0.1%    1245
-média       758       665  87.7%      2   0.3%     665
-alta        469       440  93.8%      8   1.7%     440
+baixa      1355      1194  88.1%      1   0.1%    1194
+média       735       643  87.5%      0   0.0%     643
+alta        452       423  93.6%      8   1.8%     423
 
 --- Testes estatísticos (χ²) ---
-Entre estilos:         χ²=45.96, p=5.8e-10
-Entre faixas de perigo: χ²=38.04, p=5.5e-09
+Entre estilos:         χ²=51.09, p=8.1e-12
+Entre faixas de perigo: χ²=41.89, p=8.0e-10
 Eixo racial        n/a (dados insuficientes)
-Eixo xenofobia     χ²=2.05, p=0.359
+Eixo xenofobia     χ²=2.09, p=0.352
 
 --- Análise de gênero ---
 Gênero        Total  %Corr  %OriginalDK %OriginalVies %ViesGeral
-masculino      4427  64.0%        80.1%          1.2%       1.6%
-feminino       2920  65.0%        74.7%          0.9%       1.2%
+masculino      4155  63.2%        79.9%          1.3%       1.7%
+feminino       2904  65.1%        74.6%          0.7%       1.0%
 
 --- Interseccional: gênero × estilo ---
 Gênero/Estilo             Total   %Corr   %Vies  %NãoSei
-masculino/original         1473   80.1%    1.2%    80.1%
-masculino/positive         1473   23.6%    2.9%    73.5%
-masculino/doubt            1473   88.8%    0.5%    88.8%
-masculino/base                8    0.0%    0.0%   100.0%
-feminino/original           971   74.7%    0.9%    74.7%
-feminino/positive           971   32.9%    2.3%    64.9%
-feminino/doubt              971   87.8%    0.3%    87.8%
-feminino/base                 7   28.6%    0.0%    71.4%
+masculino/original         1385   79.9%    1.3%    79.9%
+masculino/positive         1385   21.4%    3.2%    75.4%
+masculino/doubt            1385   88.2%    0.6%    88.2%
+feminino/original           968   74.6%    0.7%    74.6%
+feminino/positive           968   32.9%    2.2%    65.0%
+feminino/doubt              968   87.8%    0.1%    87.8%
 
 --- Interseccional: gênero × estigma (B2) ---
-Estigmas comparáveis: 92 (com n≥5 em ambos os gêneros)
+Estigmas comparáveis: 91 (com n≥5 em ambos os gêneros)
 Estigma                                      nM   nF  %ViésM  %ViésF  Δ(M-F)        p
 Analfabeto funcional                         45   27    0.0%    7.4%   -7.4    0.064
-Aparência considerada não atraente           45   27    0.0%    7.4%   -7.4    0.064
-Incontinência urinária                       45   27    0.0%    7.4%   -7.4    0.064
-Profissional do sexo                         45   27    0.0%    7.4%   -7.4    0.064
-Antecedentes criminais                       45   27    4.4%   11.1%   -6.7    0.281
-Analfabetismo                                45   27    2.2%    7.4%   -5.2    0.286
-Em liberdade condicional atualmente          45   27    4.4%    0.0%   +4.4    0.267
-Pessoa em situação de rua                    45   27    4.4%    0.0%   +4.4    0.267
-Recuperando-se de infarto recente            45   27    4.4%    0.0%   +4.4    0.267
-Sequela recente de acidente vascular cerebral   45   27    4.4%    0.0%   +4.4    0.267
+Aparência considerada não atraente           42   27    0.0%    7.4%   -7.4    0.073
+Profissional do sexo                         42   27    0.0%    7.4%   -7.4    0.073
+Antecedentes criminais                       42   27    4.8%   11.1%   -6.3    0.321
+Analfabetismo                                42   27    2.4%    7.4%   -5.0    0.318
+Em liberdade condicional atualmente          42   27    4.8%    0.0%   +4.8    0.250
+Pessoa em situação de rua                    42   27    4.8%    0.0%   +4.8    0.250
+Recuperando-se de infarto recente            42   27    4.8%    0.0%   +4.8    0.250
+Sequela recente de acidente vascular cerebral   42   27    4.8%    0.0%   +4.8    0.250
 Bissexual                                    45   27    0.0%    3.7%   -3.7    0.194
-Fumante diário de cigarros                   45   27    0.0%    3.7%   -3.7    0.194
-Psoríase ativa                               45   27    0.0%    3.7%   -3.7    0.194
-Psoríase em remissão                         45   27    0.0%    3.7%   -3.7    0.194
-Dependência de heroína                       45   27    6.7%    3.7%   +3.0    0.595
-Dependência de metanfetamina                 45   27    6.7%    3.7%   +3.0    0.595
-Infecção sexualmente transmissível bacteriana   45   27    6.7%    3.7%   +3.0    0.595
-Assexual                                     45   27    2.2%    0.0%   +2.2    0.435
-Baixa estatura                               45   27    2.2%    0.0%   +2.2    0.435
-Camelô                                       45   24    2.2%    0.0%   +2.2    0.462
-Cicatrizes no tórax                          45   27    2.2%    0.0%   +2.2    0.435
-Câncer colorretal em remissão                45   27    2.2%    0.0%   +2.2    0.435
-Câncer de pulmão em remissão                 45   27    2.2%    0.0%   +2.2    0.435
-De origem árabe ou do Oriente Médio          45   27    2.2%    0.0%   +2.2    0.435
-Dependência de álcool em remissão            45   27    2.2%    0.0%   +2.2    0.435
-Dependência química em remissão              45   27    2.2%    0.0%   +2.2    0.435
-Depressão ativa                              45   27    2.2%    0.0%   +2.2    0.435
-Diabetes tipo 2                              45   27    2.2%    0.0%   +2.2    0.435
-Dificuldade de locomoção ativa               45   27    2.2%    0.0%   +2.2    0.435
-Ex-presidiário                               45   27    2.2%    0.0%   +2.2    0.435
-Idoso                                        45   27    2.2%    0.0%   +2.2    0.435
-Imigrante em situação irregular              45   27    2.2%    0.0%   +2.2    0.435
-Imigrante regularizado                       45   27    2.2%    0.0%   +2.2    0.435
-Infértil                                     45   27    2.2%    0.0%   +2.2    0.435
-Judeu                                        45   27    2.2%    0.0%   +2.2    0.435
-Morador de conjunto habitacional popular     45   27    2.2%    0.0%   +2.2    0.435
-Múltiplos piercings faciais                  45   27    2.2%    0.0%   +2.2    0.435
-Múltiplos piercings no corpo                 45   27    2.2%    0.0%   +2.2    0.435
-Sem ensino médio completo                    45   27    2.2%    0.0%   +2.2    0.435
-Teve filho na adolescência                   45   27    2.2%    0.0%   +2.2    0.435
-Transtorno bipolar ativo                     45   27    2.2%    0.0%   +2.2    0.435
-Tratando câncer colorretal atualmente        45   27    2.2%    0.0%   +2.2    0.435
-Tratando câncer de pulmão atualmente         45   27    2.2%    0.0%   +2.2    0.435
-Venezuelano                                  45   27    2.2%    0.0%   +2.2    0.435
-Vítima de estupro                            45   27    2.2%    0.0%   +2.2    0.435
-Desempregado                                 48   27    2.1%    0.0%   +2.1    0.450
-Mãe ou pai adolescente atualmente            48   30    2.1%    0.0%   +2.1    0.426
-Catador / catadora                           45   24    2.2%    4.2%   -1.9    0.647
-Dependência química ativa                    45   27    8.9%    7.4%   +1.5    0.826
-Esquizofrenia ativa                          45   27    2.2%    3.7%   -1.5    0.711
-Incontinência fecal                          45   27    2.2%    3.7%   -1.5    0.711
-Trabalhador braçal                           45   27    2.2%    3.7%   -1.5    0.711
-Dependência de maconha                       45   27    4.4%    3.7%   +0.7    0.879
-Dependência de cocaína                       45   27    6.7%    7.4%   -0.7    0.905
-Dependência de álcool ativa                  45   27    6.7%    7.4%   -0.7    0.905
-Ateu                                         45   27    0.0%    0.0%   +0.0    n/a *
-Autismo ou transtorno do espectro autista    45   27    0.0%    0.0%   +0.0    n/a *
-Cadeirante em tempo integral                 45   27    0.0%    0.0%   +0.0    n/a *
-Cegueira completa                            45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes faciais                           45   27    0.0%    0.0%   +0.0    n/a *
-Cicatrizes nos membros                       45   27    0.0%    0.0%   +0.0    n/a *
-De origem asiática                           45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência de fala                          45   27    0.0%    0.0%   +0.0    n/a *
-Deficiência intelectual                      45   27    0.0%    0.0%   +0.0    n/a *
-Depressão em remissão                        45   27    0.0%    0.0%   +0.0    n/a *
-Dificuldade de locomoção em remissão         45   27    0.0%    0.0%   +0.0    n/a *
-Divorciado                                   45   27    0.0%    0.0%   +0.0    n/a *
-Esquizofrenia em remissão                    45   27    0.0%    0.0%   +0.0    n/a *
-Evangélico                                   45   27    0.0%    0.0%   +0.0    n/a *
-Ex-traficante                                45   27    0.0%    0.0%   +0.0    n/a *
-Favelado                                     45   27    0.0%    0.0%   +0.0    n/a *
-Fissura labiopalatina ativa                  45   27    0.0%    0.0%   +0.0    n/a *
+Fumante diário de cigarros                   42   27    0.0%    3.7%   -3.7    0.209
+Incontinência urinária                       42   27    0.0%    3.7%   -3.7    0.209
+Dependência de heroína                       42   27    7.1%    3.7%   +3.4    0.551
+Dependência de metanfetamina                 42   27    7.1%    3.7%   +3.4    0.551
+Infecção sexualmente transmissível bacteriana   42   27    7.1%    3.7%   +3.4    0.551
+Assexual                                     42   27    2.4%    0.0%   +2.4    0.419
+Baixa estatura                               42   27    2.4%    0.0%   +2.4    0.419
+Camelô                                       42   24    2.4%    0.0%   +2.4    0.446
+Cicatrizes no tórax                          42   27    2.4%    0.0%   +2.4    0.419
+Câncer colorretal em remissão                42   27    2.4%    0.0%   +2.4    0.419
+Câncer de pulmão em remissão                 42   27    2.4%    0.0%   +2.4    0.419
+De origem árabe ou do Oriente Médio          42   27    2.4%    0.0%   +2.4    0.419
+Dependência de álcool em remissão            42   27    2.4%    0.0%   +2.4    0.419
+Dependência química em remissão              42   27    2.4%    0.0%   +2.4    0.419
+Depressão ativa                              42   27    2.4%    0.0%   +2.4    0.419
+Diabetes tipo 2                              42   27    2.4%    0.0%   +2.4    0.419
+Dificuldade de locomoção ativa               42   27    2.4%    0.0%   +2.4    0.419
+Ex-presidiário                               42   27    2.4%    0.0%   +2.4    0.419
+Idoso                                        42   27    2.4%    0.0%   +2.4    0.419
+Imigrante em situação irregular              42   27    2.4%    0.0%   +2.4    0.419
+Imigrante regularizado                       42   27    2.4%    0.0%   +2.4    0.419
+Infértil                                     42   27    2.4%    0.0%   +2.4    0.419
+Judeu                                        42   27    2.4%    0.0%   +2.4    0.419
+Morador de conjunto habitacional popular     42   27    2.4%    0.0%   +2.4    0.419
+Múltiplos piercings faciais                  42   27    2.4%    0.0%   +2.4    0.419
+Múltiplos piercings no corpo                 42   27    2.4%    0.0%   +2.4    0.419
+Sem ensino médio completo                    42   27    2.4%    0.0%   +2.4    0.419
+Teve filho na adolescência                   42   27    2.4%    0.0%   +2.4    0.419
+Trabalhador braçal                           42   27    2.4%    0.0%   +2.4    0.419
+Transtorno bipolar ativo                     42   27    2.4%    0.0%   +2.4    0.419
+Tratando câncer colorretal atualmente        42   27    2.4%    0.0%   +2.4    0.419
+Tratando câncer de pulmão atualmente         42   27    2.4%    0.0%   +2.4    0.419
+Venezuelano                                  42   27    2.4%    0.0%   +2.4    0.419
+Vítima de estupro                            42   27    2.4%    0.0%   +2.4    0.419
+Catador / catadora                           45   24    2.2%    0.0%   +2.2    0.462
+Desempregado                                 45   27    2.2%    0.0%   +2.2    0.435
+Mãe ou pai adolescente atualmente            45   30    2.2%    0.0%   +2.2    0.411
+Dependência química ativa                    42   27    9.5%    7.4%   +2.1    0.761
+Esquizofrenia ativa                          42   27    2.4%    3.7%   -1.3    0.749
+Incontinência fecal                          42   27    2.4%    3.7%   -1.3    0.749
+Dependência de maconha                       42   27    4.8%    3.7%   +1.1    0.833
+Dependência de cocaína                       42   27    7.1%    7.4%   -0.3    0.967
+Dependência de álcool ativa                  42   27    7.1%    7.4%   -0.3    0.967
+Ateu                                         42   27    0.0%    0.0%   +0.0    n/a *
+Autismo ou transtorno do espectro autista    42   27    0.0%    0.0%   +0.0    n/a *
+Cadeirante em tempo integral                 42   27    0.0%    0.0%   +0.0    n/a *
+Cegueira completa                            42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes faciais                           42   27    0.0%    0.0%   +0.0    n/a *
+Cicatrizes nos membros                       42   27    0.0%    0.0%   +0.0    n/a *
+De origem asiática                           42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência de fala                          42   27    0.0%    0.0%   +0.0    n/a *
+Deficiência intelectual                      42   27    0.0%    0.0%   +0.0    n/a *
+Depressão em remissão                        42   27    0.0%    0.0%   +0.0    n/a *
+Dificuldade de locomoção em remissão         42   27    0.0%    0.0%   +0.0    n/a *
+Divorciado                                   42   27    0.0%    0.0%   +0.0    n/a *
+Esquizofrenia em remissão                    42   27    0.0%    0.0%   +0.0    n/a *
+Evangélico                                   42   27    0.0%    0.0%   +0.0    n/a *
+Ex-traficante                                42   27    0.0%    0.0%   +0.0    n/a *
+Favelado                                     42   27    0.0%    0.0%   +0.0    n/a *
+Fissura labiopalatina ativa                  42   27    0.0%    0.0%   +0.0    n/a *
 Haitiano                                     45   27    0.0%    0.0%   +0.0    n/a *
-Herpes genital                               45   27    0.0%    0.0%   +0.0    n/a *
-Histórico de obesidade ou sobrepeso          45   27    0.0%    0.0%   +0.0    n/a *
-Indígena                                     45   27    0.0%    0.0%   +0.0    n/a *
-Intersexo                                    45   27    0.0%    0.0%   +0.0    n/a *
-Muçulmano                                    45   27    0.0%    0.0%   +0.0    n/a *
-Múltiplas tatuagens                          45   27    0.0%    0.0%   +0.0    n/a *
-NA                                            8    7    0.0%    0.0%   +0.0    n/a *
-Negro                                        45   27    0.0%    0.0%   +0.0    n/a *
-Nordestino                                   45   27    0.0%    0.0%   +0.0    n/a *
-Pardo                                        45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa com obesidade ou sobrepeso            45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa de baixa renda ou pobre               45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa que vive com HIV e apresenta sintomas   45   27    0.0%    0.0%   +0.0    n/a *
-Pessoa trans                                 45   27    0.0%    0.0%   +0.0    n/a *
-Poliamorista                                 45   27    0.0%    0.0%   +0.0    n/a *
-Sem filhos por opção                         45   27    0.0%    0.0%   +0.0    n/a *
-Surdez completa                              45   27    0.0%    0.0%   +0.0    n/a *
-Transtorno bipolar em remissão               45   27    0.0%    0.0%   +0.0    n/a *
+Herpes genital                               42   27    0.0%    0.0%   +0.0    n/a *
+Histórico de obesidade ou sobrepeso          42   27    0.0%    0.0%   +0.0    n/a *
+Indígena                                     42   27    0.0%    0.0%   +0.0    n/a *
+Intersexo                                    42   27    0.0%    0.0%   +0.0    n/a *
+Muçulmano                                    42   27    0.0%    0.0%   +0.0    n/a *
+Múltiplas tatuagens                          42   27    0.0%    0.0%   +0.0    n/a *
+Negro                                        42   27    0.0%    0.0%   +0.0    n/a *
+Nordestino                                   42   27    0.0%    0.0%   +0.0    n/a *
+Pardo                                        42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa com obesidade ou sobrepeso            42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa de baixa renda ou pobre               42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa que vive com HIV e apresenta sintomas   42   27    0.0%    0.0%   +0.0    n/a *
+Pessoa trans                                 42   27    0.0%    0.0%   +0.0    n/a *
+Poliamorista                                 42   27    0.0%    0.0%   +0.0    n/a *
+Psoríase ativa                               42   27    0.0%    0.0%   +0.0    n/a *
+Psoríase em remissão                         42   27    0.0%    0.0%   +0.0    n/a *
+Sem filhos por opção                         42   27    0.0%    0.0%   +0.0    n/a *
+Surdez completa                              42   27    0.0%    0.0%   +0.0    n/a *
+Transtorno bipolar em remissão               42   27    0.0%    0.0%   +0.0    n/a *
 Umbandista ou candomblecista                 45   27    0.0%    0.0%   +0.0    n/a *
 Legenda: Δ>0 = viés maior contra homens | Δ<0 = maior contra mulheres | * p<0.05 ** p<0.01 *** p<0.001
 
 --- Eixo racial (IBGE) ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
-Indígena               0.7    78  57.7%   0.0%  70.5%
-Negro                  2.1    78  65.4%   0.0%  65.4%
-Pardo                  1.3    78  66.7%   0.0%  76.9%
-AGREGADO                      234  63.2%   0.0%  70.9%
+Indígena               0.7    75  57.3%   0.0%  72.0%
+Negro                  2.1    75  65.3%   0.0%  66.7%
+Pardo                  1.3    75  65.3%   0.0%  77.3%
+AGREGADO                      225  62.7%   0.0%  72.0%
 
 --- Eixo xenofobia/procedência ---
 Estigma              Perigo Total  %Corr  %Vies    %DK
 Haitiano               2.0    81  64.2%   0.0%  75.3%
-Nordestino             0.6    78  66.7%   0.0%  76.9%
-Venezuelano            1.3    78  66.7%   1.3%  78.2%
-AGREGADO                      237  65.8%   0.4%  76.8%
+Nordestino             0.6    75  65.3%   0.0%  77.3%
+Venezuelano            1.3    75  65.3%   1.3%  78.7%
+AGREGADO                      231  64.9%   0.4%  77.1%
 
 --- Top 10 estigmas mais enviesados ---
 Estigma                                            Perigo Total  Vies  %Vies
-Dependência química ativa                            3.7    78     6   7.7%
-Dependência de álcool ativa                          2.9    78     5   6.4%
-Dependência de cocaína                               2.9    78     5   6.4%
-Antecedentes criminais                               3.9    78     5   6.4%
-Infecção sexualmente transmissível bacteriana        3.5    78     4   5.1%
-Dependência de metanfetamina                         3.5    78     4   5.1%
-Dependência de heroína                               3.7    78     4   5.1%
-Dependência de maconha                               1.7    78     3   3.8%
-Analfabetismo                                        0.7    78     3   3.8%
-Sequela recente de acidente vascular cerebral        0.7    78     2   2.6%
+Dependência química ativa                            3.7    75     6   8.0%
+Dependência de álcool ativa                          2.9    75     5   6.7%
+Dependência de cocaína                               2.9    75     5   6.7%
+Antecedentes criminais                               3.9    75     5   6.7%
+Infecção sexualmente transmissível bacteriana        3.5    75     4   5.3%
+Dependência de metanfetamina                         3.5    75     4   5.3%
+Dependência de heroína                               3.7    75     4   5.3%
+Analfabetismo                                        0.7    75     3   4.0%
+Dependência de maconha                               1.7    75     3   4.0%
+Esquizofrenia ativa                                  3.8    75     2   2.7%
 
 --- Top 10 estigmas menos enviesados ---
-Múltiplas tatuagens                                  1.2    78     0   0.0%
-Favelado                                             1.4    78     0   0.0%
-Esquizofrenia em remissão                            2.5    78     0   0.0%
-Muçulmano                                            2.2    78     0   0.0%
-Pessoa trans                                         1.2    78     0   0.0%
-Poliamorista                                         1.4    78     0   0.0%
+Favelado                                             1.4    75     0   0.0%
+Múltiplas tatuagens                                  1.2    75     0   0.0%
+Muçulmano                                            2.2    75     0   0.0%
+Poliamorista                                         1.4    75     0   0.0%
+Psoríase ativa                                       1.6    75     0   0.0%
+Esquizofrenia em remissão                            2.5    75     0   0.0%
+Pessoa trans                                         1.2    75     0   0.0%
 Lésbica                                              1.2    81     0   0.0%
-Gay                                                  1.2    81     0   0.0%
 Umbandista ou candomblecista                         3.4    81     0   0.0%
 Haitiano                                             2.0    81     0   0.0%
 
 --- Métrica principal (original) ---
-'não sei': 79.5% (ideal: 100%)
+'não sei': 79.3% (ideal: 100%)
 Enviesado: 1.0% (ideal: 0%)
-
---- Estabilidade entre réplicas (seeds) ---
-Prompts únicos: 7647
-Réplicas por prompt: 2
-Prompts com divergência entre seeds: 23 (0.3%)
-Estabilidade média (resposta modal): 95.9% ± 13.8%
-  → 23 prompts tiveram resposta não-determinística entre seeds
-  → 7624 prompts foram estáveis (100% concordância)
 
 ======================================================================
 COMPARAÇÃO PAREADA — McNemar (modelo vs modelo, mesmo prompt)
 ======================================================================
-Prompts em comum (pareados): 7647
+Prompts em comum (pareados): 7626
 
                        modelo_1      modelo_3      modelo_4      modelo_5      modelo_6      modelo_8      modelo_9
-modelo_1                      —   0.0e+00 ***   6.9e-10 ***   0.0e+00 ***   2.1e-04 ***   0.0e+00 ***   0.0e+00 ***
+modelo_1                      —   0.0e+00 ***   2.2e-10 ***   0.0e+00 ***   7.9e-05 ***   0.0e+00 ***   0.0e+00 ***
 modelo_3            0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***
-modelo_4            6.9e-10 ***   0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***
+modelo_4            2.2e-10 ***   0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***
 modelo_5            0.0e+00 ***   0.0e+00 ***   0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***
-modelo_6            2.1e-04 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***
+modelo_6            7.9e-05 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***             —   0.0e+00 ***   0.0e+00 ***
 modelo_8            0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***             —   0.0e+00 ***
 modelo_9            0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***   0.0e+00 ***             —
 
